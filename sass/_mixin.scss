@@ -1,0 +1,78 @@
+//font
+@mixin font-family($font-face, $weight, $size, $space) {
+    font-family: $font-face;
+    font-weight: $weight;
+    font-size: $size;
+    letter-spacing: $space;
+}
+
+//basics
+@mixin rotate($ang) {
+    -ms-transform: rotate($ang);
+    -webkit-transform: rotate($ang);
+    transform: rotate($ang);
+}
+
+@mixin transition($type, $speed) {
+    -webkit-transition: $type $speed;
+    transition: $type $speed;
+    -webkit-transition-timing-function: ease;
+    transition-timing-function: ease;
+}
+
+@mixin border-radius($size) {
+    border-radius: $size;
+    -moz-border-radius: $size;
+    -webkit-border-radius: $size;
+}
+
+@mixin box-shadow($var) {
+    -webkit-box-shadow: $var;
+    -moz-box-shadow: $var;
+    box-shadow: $var;
+}
+
+@mixin opacity($var) {
+    opacity: $var;
+    -moz-opacity: $var;
+    -khtml-opacity: $var;
+    filter: alpha(opacity = $var * 100);
+}
+
+@mixin box {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+@mixin clear-both {
+    content: '';
+    clear: both;
+    display: block;
+    visibility: hidden;
+    height: 0;
+}
+
+@mixin translate($varx, $vary) {
+    -ms-transform: translate($varx, $vary);
+    -webkit-transform: translate($varx, $vary);
+    transform: translate($varx, $vary);
+}
+
+@mixin gradientBG($dir, $c1, $c2) {
+    background: $c1;
+
+    /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient($dir, $c1, $c2);
+
+    /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient($dir, $c1, $c2);
+
+    /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient($dir, $c1, $c2);
+
+    /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to $dir, $c1, $c2);
+
+    /* Standard syntax */
+}
