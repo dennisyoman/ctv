@@ -202,6 +202,20 @@ $(document).ready(
             onItemFinish: function(index, container, img) { container.addClass('active'); }
         });
 
+        //fancybox
+        if ($("#gallery").length > 0) {
+            $("[data-fancybox]").fancybox({
+                thumbs     : false,
+                afterLoad: function( instance, slide ) {
+                    //console.log( instance );
+                }
+            });
+            $.fancybox.defaults.hash = false;
+
+            //
+            handleGallery();
+        }
+
         //go to top
         $('#gotop').click(function() {
             var $body = (window.opera) ? (document.compatMode == "CSS1Compat" ? $('html') : $('body')) : $('html,body');
@@ -224,7 +238,6 @@ $(document).ready(
     }
 );
 
-var $mobile = false;
 
 //search
 function doSearch(srt) {
@@ -252,9 +265,100 @@ function atTopDetect() {
 
 
 function resizeScreen() {
-    //$mobile = ($(window).width() > 850 ? false : true);
     atTopDetect();
+    if ($("#gallery").length > 0) {
+        afterImgLoad();
+    }
 
+}
+
+//resize
+var sto;
+var img_count=0;
+var img_amount=0;
+var img_max=0;
+var img_left=0;
+
+function handleGallery(){
+    img_max = $("#gallery .gallery").attr("show");
+    $("#gallery .gallery").find("a").each(function(index){
+        if(index>=img_max){
+            $(this).empty();
+            img_left+=1;
+        }
+    });
+    img_amount=$("#gallery .gallery").find("img").length;
+    //if(img_max>img_amount){img_max=img_amount};
+    afterImgLoad();
+}
+function afterImgLoad(){
+    clearTimeout(sto);
+    $("#gallery .gallery").find("img").each(function(){
+        if($(this).width()*$(this).height()>0){
+            img_count+=1;
+        }
+    });
+    if(img_count==img_amount){
+        clearTimeout(sto);
+        resizeImgs();    
+    }else{
+        img_count = 0;
+        sto = setTimeout(function(){ afterImgLoad(); }, 300);
+    }
+}
+function resizeImgs(){
+    var rowH = 100;
+    var paddingW = 1;
+    if(img_count==img_amount){
+        $(".gallery").each(function(){
+            var refWidth = parseInt($(this).width())-2;
+            var imgsAy = $(this).find("img");
+            var sid=0;
+            var fid=0;
+            var countWidth=0;
+            imgsAy.css({"height":rowH,'width':'auto','padding':0});
+            for(var i=0;i<imgsAy.length;i++){
+                if(parseInt(countWidth+imgsAy.eq(i).width()+paddingW*2)<=refWidth){
+                    countWidth+=parseInt(imgsAy.eq(i).width()+paddingW*2);
+                    if(i==imgsAy.length-1){
+                        fid= i;
+                        var finalH = parseInt((refWidth-paddingW*2*(fid-sid+1))*rowH/(countWidth-paddingW*2*(fid-sid+1)));
+                        for(var j=sid;j<=fid;j++){
+                            imgsAy.eq(j).css({"height":finalH,'padding':paddingW}).fadeIn();
+                        }
+                    }
+                }else{
+                    fid= (i-1);
+                    //resizing period
+                    var finalH = parseInt((refWidth-paddingW*2*(fid-sid+1))*rowH/(countWidth-paddingW*2*(fid-sid+1)));
+                    for(var j=sid;j<=fid;j++){
+                        imgsAy.eq(j).css({"height":finalH,'padding':paddingW}).fadeIn();
+                    }
+                    
+                    //reset
+                    countWidth=parseInt(imgsAy.eq(i).width()+paddingW*2);
+                    sid=i;
+                    fid = i;
+                    if(i==imgsAy.length-1){
+                        fid= i;
+                        var finalH = parseInt((refWidth-paddingW*2*(fid-sid+1))*rowH/(countWidth-paddingW*2*(fid-sid+1)));
+                        for(var j=sid;j<=fid;j++){
+                            imgsAy.eq(j).css({"height":finalH,'padding':paddingW}).fadeIn();
+                        }
+                    }
+                }
+            }
+        }) 
+    }
+
+    //add sign
+    if(img_left>0){
+        if ($("#gallery .extra").length <= 0) {
+            var tempA = $("#gallery .gallery").find("a").eq(img_max-1);
+            tempA.append('<div class="extra">+'+(img_left+1)+'</div>');
+            tempA.find(".extra").css({"line-height":tempA.height()+'px'});
+        }
+    }
 }
 
 
