@@ -222,6 +222,7 @@
             display: none;
             width: 0;
             height: 0;
+            overflow: hidden;
         }
 
         ::-webkit-scrollbar {
@@ -278,7 +279,7 @@
 
     .copyright {
         > div {
-            width: 90%;
+            width: 80%;
         }
     }
 }
