@@ -43,6 +43,17 @@ $(document).ready(
 
                 swapBanner(0);
             });
+            //hammer
+            var swiper1 = new Hammer(document.getElementById('banner_drama'));
+            swiper1.on("swipeleft swiperight", function(ev) {
+                //myElement.textContent = ev.type +" gesture detected.";
+                //console.log(ev.type);
+                if (ev.type == 'swipeleft') {
+                    next_banner.click();
+                } else if (ev.type == 'swiperight') {
+                    prev_banner.click();
+                }
+            });
         }
 
         function swapBanner(num) {
