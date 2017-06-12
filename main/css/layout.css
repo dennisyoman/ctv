@@ -1336,10 +1336,111 @@ body {
 }
 
 /* line 1290, ../sass/layout.scss */
-.dramaDetail {
+.article {
   margin: 50px 0;
 }
 /* line 1293, ../sass/layout.scss */
+.article > div {
+  width: 90%;
+  margin: 0px auto 5px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 25px;
+  border: 1px solid #ddd;
+  background: #fff;
+}
+/* line 1303, ../sass/layout.scss */
+.article > div .tag {
+  font-size: 14px;
+  color: #ca3537;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+/* line 1308, ../sass/layout.scss */
+.article > div .tag::before {
+  content: "\f02b";
+  font-family: FontAwesome;
+  margin-right: 5px;
+}
+/* line 1315, ../sass/layout.scss */
+.article > div .title {
+  font-size: 24px;
+  color: #000;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+/* line 1322, ../sass/layout.scss */
+.article > div .author {
+  font-size: 12px;
+  color: #999;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  text-align: right;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+/* line 1331, ../sass/layout.scss */
+.article > div .author::before {
+  content: "\f017";
+  font-family: FontAwesome;
+  margin-right: 5px;
+}
+/* line 1338, ../sass/layout.scss */
+.article > div .editor {
+  line-height: 1.5;
+}
+/* line 1343, ../sass/layout.scss */
+.article .thumbnail {
+  width: 90%;
+  padding: 0;
+  border: 0;
+  margin-bottom: 0;
+}
+/* line 1348, ../sass/layout.scss */
+.article .thumbnail img {
+  width: 100%;
+}
+/* line 1353, ../sass/layout.scss */
+.article .tags {
+  background: #ccc;
+}
+/* line 1356, ../sass/layout.scss */
+.article .tags a {
+  display: inline-block;
+  margin: 8px;
+  color: #000;
+  font-size: 12px;
+  line-height: 1;
+  text-decoration: none;
+}
+/* line 1359, ../sass/layout.scss */
+.article .tags a::before {
+  content: "\f02b";
+  font-family: FontAwesome;
+  margin-right: 5px;
+}
+/* line 1372, ../sass/layout.scss */
+.article .yt {
+  position: relative;
+  height: 0;
+  padding-bottom: 50.6%;
+  background: #000;
+}
+/* line 1378, ../sass/layout.scss */
+.article .yt iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 1388, ../sass/layout.scss */
+.dramaDetail {
+  margin: 50px 0;
+}
+/* line 1391, ../sass/layout.scss */
 .dramaDetail > div {
   width: 90%;
   margin: 5px auto;
@@ -1350,15 +1451,15 @@ body {
   border: 1px solid #ddd;
   background: #fff;
 }
-/* line 1303, ../sass/layout.scss */
+/* line 1401, ../sass/layout.scss */
 .dramaDetail > div .head {
   width: 100%;
 }
-/* line 1308, ../sass/layout.scss */
+/* line 1406, ../sass/layout.scss */
 .dramaDetail .info {
   background: #ccc;
 }
-/* line 1311, ../sass/layout.scss */
+/* line 1409, ../sass/layout.scss */
 .dramaDetail .info > div {
   font-size: 14px;
   color: #000;
@@ -1368,28 +1469,28 @@ body {
   letter-spacing: 0.1em;
   position: relative;
 }
-/* line 1320, ../sass/layout.scss */
+/* line 1418, ../sass/layout.scss */
 .dramaDetail .info > div span {
   position: absolute;
   left: -90px;
   color: #fff;
 }
-/* line 1328, ../sass/layout.scss */
+/* line 1426, ../sass/layout.scss */
 .dramaDetail .textOnly {
   font-size: 14px;
   line-height: 1.5;
   color: #000;
   letter-spacing: 0.1em;
 }
-/* line 1334, ../sass/layout.scss */
+/* line 1432, ../sass/layout.scss */
 .dramaDetail .textOnly p {
   margin: 8px 0;
 }
-/* line 1340, ../sass/layout.scss */
+/* line 1438, ../sass/layout.scss */
 .dramaDetail .characterList > div {
   margin-bottom: 10px;
 }
-/* line 1343, ../sass/layout.scss */
+/* line 1441, ../sass/layout.scss */
 .dramaDetail .characterList > div .thumb {
   width: 100px;
   height: 130px;
@@ -1403,25 +1504,25 @@ body {
   -webkit-transition-timing-function: ease;
   transition-timing-function: ease;
 }
-/* line 1351, ../sass/layout.scss */
+/* line 1449, ../sass/layout.scss */
 .dramaDetail .characterList > div .thumb.active {
   opacity: 1;
   -moz-opacity: 1;
   -khtml-opacity: 1;
   filter: alpha(opacity=100);
 }
-/* line 1356, ../sass/layout.scss */
+/* line 1454, ../sass/layout.scss */
 .dramaDetail .characterList > div .about {
   margin-left: 120px;
   display: flex;
 }
-/* line 1360, ../sass/layout.scss */
+/* line 1458, ../sass/layout.scss */
 .dramaDetail .characterList > div .about > div:first-child {
   -webkit-flex: 1;
   flex: 1;
   letter-spacing: 0.1em;
 }
-/* line 1364, ../sass/layout.scss */
+/* line 1462, ../sass/layout.scss */
 .dramaDetail .characterList > div .about > div:first-child h2 {
   font-size: 16px;
   font-weight: bold;
@@ -1429,13 +1530,13 @@ body {
   line-height: 1.5;
   margin-bottom: 5px;
 }
-/* line 1372, ../sass/layout.scss */
+/* line 1470, ../sass/layout.scss */
 .dramaDetail .characterList > div .about > div:first-child h3 {
   font-size: 14px;
   color: #999;
   line-height: 1.5;
 }
-/* line 1381, ../sass/layout.scss */
+/* line 1479, ../sass/layout.scss */
 .dramaDetail .characterList > div .about > div:last-child {
   border-left: 1px solid #eee;
   padding-left: 20px;
@@ -1446,7 +1547,7 @@ body {
   color: #000;
   letter-spacing: 0.1em;
 }
-/* line 1393, ../sass/layout.scss */
+/* line 1491, ../sass/layout.scss */
 .dramaDetail .characterList > div::after {
   content: "";
   display: block;
@@ -1454,17 +1555,17 @@ body {
   visibility: hidden;
   height: 0;
 }
-/* line 1404, ../sass/layout.scss */
+/* line 1502, ../sass/layout.scss */
 .dramaDetail .gallery a {
   display: inline-block;
   float: left;
   position: relative;
 }
-/* line 1409, ../sass/layout.scss */
+/* line 1507, ../sass/layout.scss */
 .dramaDetail .gallery a img {
   display: none;
 }
-/* line 1413, ../sass/layout.scss */
+/* line 1511, ../sass/layout.scss */
 .dramaDetail .gallery a .extra {
   position: absolute;
   width: 100%;
@@ -1477,7 +1578,7 @@ body {
   text-align: center;
   background: rgba(0, 0, 0, 0.6);
 }
-/* line 1427, ../sass/layout.scss */
+/* line 1525, ../sass/layout.scss */
 .dramaDetail .gallery::after {
   content: "";
   display: block;
@@ -1485,14 +1586,14 @@ body {
   visibility: hidden;
   height: 0;
 }
-/* line 1436, ../sass/layout.scss */
+/* line 1534, ../sass/layout.scss */
 .dramaDetail .yt {
   position: relative;
   height: 0;
   padding-bottom: 50.6%;
   background: #000;
 }
-/* line 1442, ../sass/layout.scss */
+/* line 1540, ../sass/layout.scss */
 .dramaDetail .yt iframe {
   position: absolute;
   top: 0;
@@ -1501,31 +1602,31 @@ body {
   height: 100%;
 }
 
-/* line 1452, ../sass/layout.scss */
+/* line 1550, ../sass/layout.scss */
 .footer {
   width: 100%;
   border-top: 5px solid #ca3537;
   background: #444;
 }
-/* line 1457, ../sass/layout.scss */
+/* line 1555, ../sass/layout.scss */
 .footer .mid {
   width: 95%;
   max-width: 1200px;
   margin: 0 auto;
 }
-/* line 1462, ../sass/layout.scss */
+/* line 1560, ../sass/layout.scss */
 .footer .mid .sitemap {
   margin: 30px 0;
   width: 75%;
   float: left;
 }
-/* line 1467, ../sass/layout.scss */
+/* line 1565, ../sass/layout.scss */
 .footer .mid .sitemap > div {
   display: inline-block;
   width: 30%;
   margin: 20px 0;
 }
-/* line 1472, ../sass/layout.scss */
+/* line 1570, ../sass/layout.scss */
 .footer .mid .sitemap > div a {
   display: block;
   color: #999;
@@ -1533,11 +1634,11 @@ body {
   font-size: 13px;
   line-height: 1.8;
 }
-/* line 1479, ../sass/layout.scss */
+/* line 1577, ../sass/layout.scss */
 .footer .mid .sitemap > div a:first-child {
   color: #fff;
 }
-/* line 1485, ../sass/layout.scss */
+/* line 1583, ../sass/layout.scss */
 .footer .mid .sitemap > div.social a {
   display: inline-block;
   width: 30px;
@@ -1550,27 +1651,27 @@ body {
   text-decoration: none;
   margin: 5px;
 }
-/* line 1498, ../sass/layout.scss */
+/* line 1596, ../sass/layout.scss */
 .footer .mid .sitemap > div.social a.fb::before {
   content: "\f09a";
   font-family: FontAwesome;
 }
-/* line 1505, ../sass/layout.scss */
+/* line 1603, ../sass/layout.scss */
 .footer .mid .sitemap > div.social a.twitter::before {
   content: "\f099";
   font-family: FontAwesome;
 }
-/* line 1512, ../sass/layout.scss */
+/* line 1610, ../sass/layout.scss */
 .footer .mid .sitemap > div.social a.youtube::before {
   content: "\f16a";
   font-family: FontAwesome;
 }
-/* line 1519, ../sass/layout.scss */
+/* line 1617, ../sass/layout.scss */
 .footer .mid .sitemap > div.social a.instagram::before {
   content: "\f16d";
   font-family: FontAwesome;
 }
-/* line 1528, ../sass/layout.scss */
+/* line 1626, ../sass/layout.scss */
 .footer .mid .sitemap::after {
   content: "";
   display: block;
@@ -1578,18 +1679,18 @@ body {
   visibility: hidden;
   height: 0;
 }
-/* line 1537, ../sass/layout.scss */
+/* line 1635, ../sass/layout.scss */
 .footer .mid .logo {
   width: 25%;
   float: right;
   margin: 50px 0;
 }
-/* line 1542, ../sass/layout.scss */
+/* line 1640, ../sass/layout.scss */
 .footer .mid .logo img {
   width: 70%;
   height: auto;
 }
-/* line 1548, ../sass/layout.scss */
+/* line 1646, ../sass/layout.scss */
 .footer .mid::after {
   content: "";
   display: block;
@@ -1597,11 +1698,11 @@ body {
   visibility: hidden;
   height: 0;
 }
-/* line 1557, ../sass/layout.scss */
+/* line 1655, ../sass/layout.scss */
 .footer .copyright {
   background: #333;
 }
-/* line 1560, ../sass/layout.scss */
+/* line 1658, ../sass/layout.scss */
 .footer .copyright > div {
   width: 95%;
   max-width: 1200px;
@@ -1613,12 +1714,12 @@ body {
   color: #999;
 }
 
-/* line 1573, ../sass/layout.scss */
+/* line 1671, ../sass/layout.scss */
 .share {
   text-align: center;
   padding: 20px 0 40px;
 }
-/* line 1577, ../sass/layout.scss */
+/* line 1675, ../sass/layout.scss */
 .share a {
   display: inline-block;
   width: 30px;
@@ -1631,22 +1732,22 @@ body {
   text-decoration: none;
   margin: 5px;
 }
-/* line 1590, ../sass/layout.scss */
+/* line 1688, ../sass/layout.scss */
 .share a.fb::before {
   content: "\f09a";
   font-family: FontAwesome;
 }
-/* line 1597, ../sass/layout.scss */
+/* line 1695, ../sass/layout.scss */
 .share a.twitter::before {
   content: "\f099";
   font-family: FontAwesome;
 }
-/* line 1604, ../sass/layout.scss */
+/* line 1702, ../sass/layout.scss */
 .share a.youtube::before {
   content: "\f16a";
   font-family: FontAwesome;
 }
-/* line 1611, ../sass/layout.scss */
+/* line 1709, ../sass/layout.scss */
 .share a.instagram::before {
   content: "\f16d";
   font-family: FontAwesome;
@@ -2198,5 +2299,14 @@ body {
   /* line 579, ../sass/_layout_m.scss */
   .footer .copyright > div {
     width: 80%;
+  }
+
+  /* line 587, ../sass/_layout_m.scss */
+  .article > div {
+    width: 100%;
+  }
+  /* line 591, ../sass/_layout_m.scss */
+  .article .thumbnail {
+    width: 100%;
   }
 }
