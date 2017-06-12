@@ -1643,35 +1643,34 @@ body {
   display: inline-block;
   width: 30px;
   height: 30px;
-  background: #ccc;
   line-height: 30px;
   text-align: center;
-  color: #444;
+  color: #ccc;
   font-size: 16px;
   text-decoration: none;
   margin: 5px;
 }
-/* line 1596, ../sass/layout.scss */
+/* line 1595, ../sass/layout.scss */
 .footer .mid .sitemap > div.social a.fb::before {
   content: "\f09a";
   font-family: FontAwesome;
 }
-/* line 1603, ../sass/layout.scss */
+/* line 1602, ../sass/layout.scss */
 .footer .mid .sitemap > div.social a.twitter::before {
   content: "\f099";
   font-family: FontAwesome;
 }
-/* line 1610, ../sass/layout.scss */
+/* line 1609, ../sass/layout.scss */
 .footer .mid .sitemap > div.social a.youtube::before {
   content: "\f16a";
   font-family: FontAwesome;
 }
-/* line 1617, ../sass/layout.scss */
+/* line 1616, ../sass/layout.scss */
 .footer .mid .sitemap > div.social a.instagram::before {
   content: "\f16d";
   font-family: FontAwesome;
 }
-/* line 1626, ../sass/layout.scss */
+/* line 1625, ../sass/layout.scss */
 .footer .mid .sitemap::after {
   content: "";
   display: block;
@@ -1679,18 +1678,18 @@ body {
   visibility: hidden;
   height: 0;
 }
-/* line 1635, ../sass/layout.scss */
+/* line 1634, ../sass/layout.scss */
 .footer .mid .logo {
   width: 25%;
   float: right;
   margin: 50px 0;
 }
-/* line 1640, ../sass/layout.scss */
+/* line 1639, ../sass/layout.scss */
 .footer .mid .logo img {
   width: 70%;
   height: auto;
 }
-/* line 1646, ../sass/layout.scss */
+/* line 1645, ../sass/layout.scss */
 .footer .mid::after {
   content: "";
   display: block;
@@ -1698,11 +1697,11 @@ body {
   visibility: hidden;
   height: 0;
 }
-/* line 1655, ../sass/layout.scss */
+/* line 1654, ../sass/layout.scss */
 .footer .copyright {
   background: #333;
 }
-/* line 1658, ../sass/layout.scss */
+/* line 1657, ../sass/layout.scss */
 .footer .copyright > div {
   width: 95%;
   max-width: 1200px;
@@ -1714,17 +1713,17 @@ body {
   color: #999;
 }
 
-/* line 1671, ../sass/layout.scss */
+/* line 1670, ../sass/layout.scss */
 .share {
   text-align: center;
   padding: 20px 0 40px;
 }
-/* line 1675, ../sass/layout.scss */
+/* line 1674, ../sass/layout.scss */
 .share a {
   display: inline-block;
   width: 30px;
   height: 30px;
-  background: #ca3537;
+  background: #000;
   line-height: 30px;
   text-align: center;
   color: #fff;
@@ -1732,22 +1731,43 @@ body {
   text-decoration: none;
   margin: 5px;
 }
+/* line 1686, ../sass/layout.scss */
+.share a.fb {
+  background: #3b5998;
+}
 /* line 1688, ../sass/layout.scss */
 .share a.fb::before {
   content: "\f09a";
   font-family: FontAwesome;
 }
-/* line 1695, ../sass/layout.scss */
+/* line 1694, ../sass/layout.scss */
+.share a.gplus {
+  background: #ca3537;
+}
+/* line 1696, ../sass/layout.scss */
+.share a.gplus::before {
+  content: "\f0d5";
+  font-family: FontAwesome;
+}
+/* line 1702, ../sass/layout.scss */
+.share a.twitter {
+  background: #00aced;
+}
+/* line 1704, ../sass/layout.scss */
 .share a.twitter::before {
   content: "\f099";
   font-family: FontAwesome;
 }
-/* line 1702, ../sass/layout.scss */
+/* line 1710, ../sass/layout.scss */
+.share a.youtube {
+  background: #3b5998;
+}
+/* line 1712, ../sass/layout.scss */
 .share a.youtube::before {
   content: "\f16a";
   font-family: FontAwesome;
 }
-/* line 1709, ../sass/layout.scss */
+/* line 1719, ../sass/layout.scss */
 .share a.instagram::before {
   content: "\f16d";
   font-family: FontAwesome;
