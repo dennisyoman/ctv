@@ -22,6 +22,93 @@ $(document).ready(
             }, 2000);
 
         }
+        //banner_index
+        if ($("#banner_index").length > 0) {
+            var autoPlayIndex = true;
+            var sto3;
+            var $bannerIndexId = -1;
+            var $bannerIndexMax = $("#banner_index_list").find("a").length;
+            var nextIndex = $("#banner_index").find(".next").eq(0);
+            var prevIndex = $("#banner_index").find(".prev").eq(0);
+            var btnList = $("#banner_index .btns .list ul").eq(0);
+            var $indexBtnsID=0;
+            
+            //prevIndex.hide();
+            //nextIndex.hide();
+
+  
+            nextIndex.click(function() {
+                console.log(parseInt(btnList.css("left")) + btnList.prop('scrollWidth'));
+                console.log(btnList.width());
+                if (parseInt(btnList.css("left")) + btnList.prop('scrollWidth') > btnList.parent().width()) {
+                    var containWIndex = $("#banner_index").find(".btns").eq(0).width();
+                    $indexBtnsID += 1;
+                    btnList.css("left", $indexBtnsID * containWIndex * -1);
+                }
+            });
+            prevIndex.click(function() {
+                if ($indexBtnsID > 0) {
+                    var containWIndex = btnList.parent().width();
+                    $indexBtnsID -= 1;
+                    btnList.css("left", $indexBtnsID * containWIndex * -1);
+                }
+            });
+
+            //add Btnd
+            $("#banner_index_list").find("a").each(function(index){
+                var tImg = $(this).find("img").eq(0).attr("src");
+                $("#banner_index").find("ul").append('<li><img src="'+tImg+'"/></li>');
+            });
+            $("#banner_index ul").eq(0).find("li").each(function(index){
+                $(this).click(function() {
+                    autoPlayIndex = false;
+                    clearTimeout(sto3);
+                    swapIndexBanner(index);
+                });
+            });
+
+            //autoplay
+            swapIndexBanner(-1);
+        }
+
+        function swapIndexBanner(num) {
+            if (num === -1) {
+                $bannerIndexId += 1;
+                if ($bannerIndexId > $bannerIndexMax - 1) {
+                    $bannerIndexId = 0;
+                }
+            } else {
+                $bannerIndexId = num;
+            }
+            var tar = $("#banner_index .banner_area > .list").eq(0).find("a").eq($bannerIndexId);
+            tar.addClass("selected").siblings(".selected").removeClass("selected");
+
+            var tar2 = $("#banner_index .btns > .list ul").eq(0).find("li").eq($bannerIndexId);
+            tar2.addClass("selected").siblings(".selected").removeClass("selected");
+
+            //define info
+            var title = tar.attr("title");
+            var cat = tar.attr("cat");
+            var brief = tar.attr("alt");
+            var link = tar.attr("href");
+            $("#banner_index .info").removeClass().addClass("info").addClass(cat);
+            $("#banner_index .info").eq(0).find("h2").hide().html(title).delay(800).fadeIn();
+            $("#banner_index .info").eq(0).find("h3").hide().html(cat).delay(800).fadeIn();
+            $("#banner_index .info").eq(0).find("p").hide().html(brief).delay(800).fadeIn();
+            $("#banner_index .info").eq(0).find("a").attr("href", link);
+            //
+            
+            //
+            
+            if (autoPlayIndex) {
+                sto3 = setTimeout(function() {
+                    swapIndexBanner(-1);
+                }, 4000);
+            }
+
+
+        }
+
         //banner
         if ($("#banner_drama").length > 0) {
             var autoBanner = true;
@@ -108,7 +195,7 @@ $(document).ready(
         if ($("#onAir").length > 0) {
             var list2 = $("#onAir").find(".list").eq(0);
             var $item_id2 = 0;
-            var $item_limit2 = 2;
+            var $item_limit2 = $("#onAir").attr("limit") || 2;
             var $item_max2 = list2.find("a").length;
             var $item_page2 = Math.ceil($item_max2 / $item_limit2);
             var next_btn2 = $("#onAir").find(".next").eq(0);
