@@ -89,22 +89,34 @@ $(document).ready(
             //define info
             var title = tar.attr("title");
             var cat = tar.attr("cat");
+            var catName="熱門";
+            if(cat==="drama"){
+                catName="戲劇";
+            }else if(cat == "show"){
+                catName="綜藝";
+            }else if(cat==""){
+                catName="新聞";
+            }
             var brief = tar.attr("alt");
             var link = tar.attr("href");
             $("#banner_index .info").removeClass().addClass("info").addClass(cat);
             $("#banner_index .info").eq(0).find("h2").hide().html(title).delay(800).fadeIn();
-            $("#banner_index .info").eq(0).find("h3").hide().html(cat).delay(800).fadeIn();
+            $("#banner_index .info").eq(0).find("h3").hide().html(catName).delay(800).fadeIn();
             $("#banner_index .info").eq(0).find("p").hide().html(brief).delay(800).fadeIn();
             $("#banner_index .info").eq(0).find("a").attr("href", link);
+
             //
-            
-            //
-            
+            var countDown = 4500;
             if (autoPlayIndex) {
+                //autoBar
+                $("#autoBar").stop(true,true).width(0).animate({"width":"100%"},countDown-300);
+                //timeout
                 sto3 = setTimeout(function() {
                     swapIndexBanner(-1);
-                }, 4000);
+                }, countDown);
             }
+
+            $("#autoBar").removeClass().addClass(cat);
 
 
         }
