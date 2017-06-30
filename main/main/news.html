@@ -1,0 +1,537 @@
+<!DOCTYPE>
+<!-- saved from url=(0014)about:internet -->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keyword" lang="en" content="" />
+    <meta name="keywords" lang="en" content="" />
+    <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+    <!-- 修正iPhone旋轉放大 -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- fullscreen webapp -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!-- facebook/orkut -->
+    <meta property="og:title" content="中視新聞" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="images/thumb.jpg" />
+    <meta property="og:description" content="" />
+    <meta name="description" content="" />
+    <link rel="image_src" type="image/jpeg" href="images/thumb.jpg" />
+    <title>中視新聞</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="152x152" href="images/thumb/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/thumb/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/thumb/favicon-16x16.png">
+    <link rel="manifest" href="images/thumb/manifest.json">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="theme-color" content="#ffffff">
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" rev="stylesheet" media="screen" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" rev="stylesheet" media="screen" href="css/layout.css" />
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <!-- javascript -->
+    <script type="text/javascript" src="js/jquery-2.1.4.js"></script>
+    <script type="text/javascript" src="js/imgLiquid.js"></script>
+    <script type="text/javascript" src="js/hammer.min.js"></script>
+    <script type="text/javascript" src="js/web.js"></script>
+</head>
+
+<body>
+<!-- facebook page -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v2.9&appId=255633044548036";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<!-- facebook page -->
+    <div id="header" class="header news">
+        <div class="topBar">
+            <div class="content">
+                <div class="leftPart">
+                    <a class="main" href="#"><span>中視全球資訊網</span></a>
+                    <a class="news active" href="#">新聞</a>
+                    <a class="drama" href="#">戲劇</a>
+                    <a class="show" href="#">綜藝</a>
+                </div>
+                <div class="rightPart">
+                    <a href="#">節目表</a>
+                    <a href="#">自律委員會</a>
+                    <div class="search">
+                        <span onclick="doSearch('')"></span><input id="search_input" type="text" name="search">
+                    </div>
+                </div>
+            </div>
+        </div> 
+        <div class="mid news">
+            <a class="logo" href="./"></a>
+            <div class="category">
+                <div class="list">
+                    <a onclick="doSearch('熱門')" href="#">熱門</a>
+                    <a onclick="doSearch('政治')" href="#">政治</a>
+                    <a onclick="doSearch('社會')" href="#">社會</a>
+                    <a onclick="doSearch('生活')" href="#">生活</a>
+                    <a onclick="doSearch('娛樂')" href="#">娛樂</a>
+                    <a onclick="doSearch('科普')" href="#">科普</a>
+                    <a onclick="doSearch('改變的起點')" href="#">改變的起點</a>
+                </div>
+            </div>
+            <div class="broadcast" id="broadcast">
+                <div class="list">
+                    <a href="#">醉漢擋車敲窗挑釁 遭賓士男毆倒地</a>
+                    <a href="#">惡劣! 借菜農高利貸 討債狠潑漆毀菜園</a>
+                    <a href="#">員工旅遊泡湯 業務私下接單收錢落跑</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="promo">
+        <div>
+            <a href="#"><img src="images/temp/b15.jpg"/></a>
+            <a href="#"><img src="images/temp/b14.jpg"/></a>
+            <a href="#"><img src="images/temp/b13.jpg"/></a>
+            <a href="#"><img src="images/temp/b12.jpg"/></a>
+        </div>
+    </div>
+    
+    <div class="threeColumn mode_news">
+        <div class="double">
+            <div id="topics" class="topics">
+                <div class="display">
+                    <div class="list">
+                        <a title="醉漢擋車敲窗挑釁 遭賓士男毆倒地" class="thumb" href="#"><img src="images/temp/b15.jpg"/></a>
+                        <a title="惡劣! 借菜農高利貸 討債狠潑漆毀菜園" class="thumb" href="#"><img src="images/temp/b14.jpg"/></a>
+                        <a title="員工旅遊泡湯 業務私下接單收錢落跑" class="thumb" href="#"><img src="images/temp/b13.jpg"/></a>
+                        <a title="醉漢擋車敲窗挑釁 遭賓士男毆倒地" class="thumb" href="#"><img src="images/temp/b16.jpg"/></a>
+                        <a title="惡劣! 借菜農高利貸 討債狠潑漆毀菜園" class="thumb" href="#"><img src="images/temp/b17.jpg"/></a>
+                        <a title="員工旅遊泡湯 業務私下接單收錢落跑" class="thumb" href="#"><img src="images/temp/b18.jpg"/></a>
+                        <a title="醉漢擋車敲窗挑釁 遭賓士男毆倒地" class="thumb" href="#"><img src="images/temp/b19.jpg"/></a>
+                        <a title="惡劣! 借菜農高利貸 討債狠潑漆毀菜園" class="thumb" href="#"><img src="images/temp/b20.jpg"/></a>
+                    </div>
+                    <a href="#" class="title">
+                        <h3>Topic</h3>
+                        <h2>醉漢擋車敲窗挑釁 遭賓士男毆倒地</h2>
+                    </a>
+                    <div class="autoBarTopic"><div id="autoBarTopic"></div></div>
+                </div>
+                <div class="btns">
+                    <div class="list"></div>
+                </div>
+            </div>
+
+            <div class="breaking">
+                <div class="title">
+                    <h2>即時新聞</h2>
+                    <h3>Last update : 2017/07/05</h3>
+                </div>
+                <div class="list">
+                    <a href="#">
+                        <div class="thumb"><img src="images/temp/b18.jpg"/></div>
+                        <div class="info">
+                            <div class="tag">國際</div>
+                            <div class="time">2017/07/05</div>
+                            <div class="title">滿載槍械! 警強勢追車 破窗逮嫌滿載槍械! 警強勢追車 破窗逮嫌滿載槍械! 警強勢追車 破窗逮嫌</div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="thumb"><img src="images/temp/b20.jpg"/></div>
+                        <div class="info">
+                            <div class="tag">國際</div>
+                            <div class="time">2017/07/05</div>
+                            <div class="title">滿載槍械! 警強勢追車 破窗逮嫌</div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="thumb"><img src="images/temp/b19.jpg"/></div>
+                        <div class="info">
+                            <div class="tag">國際</div>
+                            <div class="time">2017/07/05</div>
+                            <div class="title">滿載槍械! 警強勢追車 破窗逮嫌</div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="thumb"><img src="images/temp/b17.jpg"/></div>
+                        <div class="info">
+                            <div class="tag">國際</div>
+                            <div class="time">2017/07/05</div>
+                            <div class="title">滿載槍械! 警強勢追車 破窗逮嫌</div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="thumb"><img src="images/temp/b16.jpg"/></div>
+                        <div class="info">
+                            <div class="tag">國際</div>
+                            <div class="time">2017/07/05</div>
+                            <div class="title">滿載槍械! 警強勢追車 破窗逮嫌</div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="thumb"><img src="images/temp/b15.jpg"/></div>
+                        <div class="info">
+                            <div class="tag">國際</div>
+                            <div class="time">2017/07/05</div>
+                            <div class="title">滿載槍械! 警強勢追車 破窗逮嫌</div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="thumb"><img src="images/temp/b14.jpg"/></div>
+                        <div class="info">
+                            <div class="tag">國際</div>
+                            <div class="time">2017/07/05</div>
+                            <div class="title">滿載槍械! 警強勢追車 破窗逮嫌</div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="thumb"><img src="images/temp/b13.jpg"/></div>
+                        <div class="info">
+                            <div class="tag">國際</div>
+                            <div class="time">2017/07/05</div>
+                            <div class="title">滿載槍械! 警強勢追車 破窗逮嫌</div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="thumb"><img src="images/temp/b12.jpg"/></div>
+                        <div class="info">
+                            <div class="tag">國際</div>
+                            <div class="time">2017/07/05</div>
+                            <div class="title">滿載槍械! 警強勢追車 破窗逮嫌</div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="thumb"><img src="images/temp/b11.jpg"/></div>
+                        <div class="info">
+                            <div class="tag">國際</div>
+                            <div class="time">2017/07/05</div>
+                            <div class="title">滿載槍械! 警強勢追車 破窗逮嫌</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="single">
+            <div class="liveVideo">
+                <div class="yt">
+                    <iframe src="https://www.youtube.com/embed/NemPJGugcDw" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <h2>立法院審查年金衝突對峙</h2>
+                <h3>LIVE直播</h3>
+            </div>
+
+            <div class="liveVideo">
+                <div class="yt">
+                    <iframe src="https://www.youtube.com/embed/1-oEBN8VqZc" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <h2>公教團體包圍立法院抗議年金改革</h2>
+                <h3>LIVE直播</h3>
+            </div>
+
+            <a class="ad" href="#">
+                <img src="images/live_banner.jpg"/>
+            </a>
+
+            <div class="populor">
+                <div class="title">熱門新聞</div>
+                <div class="list">
+                    <a href="#">滿載槍械! 警強勢追車 破窗逮嫌滿載槍械! 警強勢追車 破窗逮嫌滿載槍械! 警強勢追車 破窗逮嫌</a>
+                    <a href="#">滿載槍械! 警強勢追車 破窗逮嫌</a>
+                    <a href="#">滿載槍械! 警強勢追車 破窗逮嫌</a>
+                    <a href="#">滿載槍械! 警強勢追車 破窗逮嫌</a>
+                    <a href="#">滿載槍械! 警強勢追車 破窗逮嫌</a>
+                    <a href="#">滿載槍械! 警強勢追車 破窗逮嫌</a>
+                    <a href="#">滿載槍械! 警強勢追車 破窗逮嫌</a>
+                    <a href="#">滿載槍械! 警強勢追車 破窗逮嫌</a>
+                    <a href="#">滿載槍械! 警強勢追車 破窗逮嫌</a>
+                    <a href="#">滿載槍械! 警強勢追車 破窗逮嫌</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div style="background: #f0f0f0;">
+        <div class="threeColumn">
+            <div class="double" style="padding-top: 50px;">
+                <div class="subject">
+                    <div class="title">
+                        <h2>政治</h2>
+                        <a href="#">更多</a>
+                    </div>
+                    <div class="list">
+                        <a href="#">
+                            <div class="thumb"><img src="images/temp/b18.jpg"/></div>
+                            <div class="info">
+                                <div class="time">2017/07/05</div>
+                                <div class="title">滿載槍械! 警強勢追車 破窗逮嫌滿載槍械! 警強勢追車 破窗逮嫌滿載槍械! 警強勢追車 破窗逮嫌</div>
+                                <div class="brief">最新民調，蔡總統滿意度跌到三成以下，藍營批評，從勞基法修法、年金前瞻，改革暴衝最新民調，蔡總統滿意度跌到三成以下，藍營批評</div>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="thumb"><img src="images/temp/b20.jpg"/></div>
+                            <div class="info">
+                                <div class="time">2017/07/05</div>
+                                <div class="title">滿載槍械! 警強勢追車 破窗逮嫌滿載槍械! 警強勢追車 破窗逮嫌滿載槍械! 警強勢追車 破窗逮嫌</div>
+                                <div class="brief">最新民調，蔡總統滿意度跌到三成以下，藍營批評，從勞基法修法、年金前瞻，改革暴衝最新民調，蔡總統滿意度跌到三成以下，藍營批評</div>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="thumb"><img src="images/temp/b19.jpg"/></div>
+                            <div class="info">
+                                <div class="time">2017/07/05</div>
+                                <div class="title">滿載槍械! 警強勢追車 破窗逮嫌滿載槍械! 警強勢追車 破窗逮嫌滿載槍械! 警強勢追車 破窗逮嫌</div>
+                                <div class="brief">最新民調，蔡總統滿意度跌到三成以下，藍營批評，從勞基法修法、年金前瞻，改革暴衝最新民調，蔡總統滿意度跌到三成以下，藍營批評</div>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="thumb"><img src="images/temp/b17.jpg"/></div>
+                            <div class="info">
+                                <div class="time">2017/07/05</div>
+                                <div class="title">滿載槍械! 警強勢追車 破窗逮嫌滿載槍械! 警強勢追車 破窗逮嫌滿載槍械! 警強勢追車 破窗逮嫌</div>
+                                <div class="brief">最新民調，蔡總統滿意度跌到三成以下，藍營批評，從勞基法修法、年金前瞻，改革暴衝最新民調，蔡總統滿意度跌到三成以下，藍營批評</div>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="thumb"><img src="images/temp/b16.jpg"/></div>
+                            <div class="info">
+                                <div class="time">2017/07/05</div>
+                                <div class="title">滿載槍械! 警強勢追車 破窗逮嫌滿載槍械! 警強勢追車 破窗逮嫌滿載槍械! 警強勢追車 破窗逮嫌</div>
+                                <div class="brief">最新民調，蔡總統滿意度跌到三成以下，藍營批評，從勞基法修法、年金前瞻，改革暴衝最新民調，蔡總統滿意度跌到三成以下，藍營批評</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="subject">
+                    <div class="title">
+                        <h2>社會</h2>
+                        <a href="#">更多</a>
+                    </div>
+                    <div class="list">
+                        <a href="#">
+                            <div class="thumb"><img src="images/temp/b18.jpg"/></div>
+                            <div class="info">
+                                <div class="time">2017/07/05</div>
+                                <div class="title">滿載槍械! 警強勢追車 破窗逮嫌滿載槍械! 警強勢追車 破窗逮嫌滿載槍械! 警強勢追車 破窗逮嫌</div>
+                                <div class="brief">最新民調，蔡總統滿意度跌到三成以下，藍營批評，從勞基法修法、年金前瞻，改革暴衝最新民調，蔡總統滿意度跌到三成以下，藍營批評</div>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="thumb"><img src="images/temp/b20.jpg"/></div>
+                            <div class="info">
+                                <div class="time">2017/07/05</div>
+                                <div class="title">滿載槍械! 警強勢追車 破窗逮嫌滿載槍械! 警強勢追車 破窗逮嫌滿載槍械! 警強勢追車 破窗逮嫌</div>
+                                <div class="brief">最新民調，蔡總統滿意度跌到三成以下，藍營批評，從勞基法修法、年金前瞻，改革暴衝最新民調，蔡總統滿意度跌到三成以下，藍營批評</div>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="thumb"><img src="images/temp/b19.jpg"/></div>
+                            <div class="info">
+                                <div class="time">2017/07/05</div>
+                                <div class="title">滿載槍械! 警強勢追車 破窗逮嫌滿載槍械! 警強勢追車 破窗逮嫌滿載槍械! 警強勢追車 破窗逮嫌</div>
+                                <div class="brief">最新民調，蔡總統滿意度跌到三成以下，藍營批評，從勞基法修法、年金前瞻，改革暴衝最新民調，蔡總統滿意度跌到三成以下，藍營批評</div>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="thumb"><img src="images/temp/b17.jpg"/></div>
+                            <div class="info">
+                                <div class="time">2017/07/05</div>
+                                <div class="title">滿載槍械! 警強勢追車 破窗逮嫌滿載槍械! 警強勢追車 破窗逮嫌滿載槍械! 警強勢追車 破窗逮嫌</div>
+                                <div class="brief">最新民調，蔡總統滿意度跌到三成以下，藍營批評，從勞基法修法、年金前瞻，改革暴衝最新民調，蔡總統滿意度跌到三成以下，藍營批評</div>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="thumb"><img src="images/temp/b16.jpg"/></div>
+                            <div class="info">
+                                <div class="time">2017/07/05</div>
+                                <div class="title">滿載槍械! 警強勢追車 破窗逮嫌滿載槍械! 警強勢追車 破窗逮嫌滿載槍械! 警強勢追車 破窗逮嫌</div>
+                                <div class="brief">最新民調，蔡總統滿意度跌到三成以下，藍營批評，從勞基法修法、年金前瞻，改革暴衝最新民調，蔡總統滿意度跌到三成以下，藍營批評</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="subject">
+                    <div class="title">
+                        <h2>生活</h2>
+                        <a href="#">更多</a>
+                    </div>
+                    <div class="list">
+                        <a href="#">
+                            <div class="thumb"><img src="images/temp/b18.jpg"/></div>
+                            <div class="info">
+                                <div class="time">2017/07/05</div>
+                                <div class="title">滿載槍械! 警強勢追車 破窗逮嫌滿載槍械! 警強勢追車 破窗逮嫌滿載槍械! 警強勢追車 破窗逮嫌</div>
+                                <div class="brief">最新民調，蔡總統滿意度跌到三成以下，藍營批評，從勞基法修法、年金前瞻，改革暴衝最新民調，蔡總統滿意度跌到三成以下，藍營批評</div>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="thumb"><img src="images/temp/b20.jpg"/></div>
+                            <div class="info">
+                                <div class="time">2017/07/05</div>
+                                <div class="title">滿載槍械! 警強勢追車 破窗逮嫌滿載槍械! 警強勢追車 破窗逮嫌滿載槍械! 警強勢追車 破窗逮嫌</div>
+                                <div class="brief">最新民調，蔡總統滿意度跌到三成以下，藍營批評，從勞基法修法、年金前瞻，改革暴衝最新民調，蔡總統滿意度跌到三成以下，藍營批評</div>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="thumb"><img src="images/temp/b19.jpg"/></div>
+                            <div class="info">
+                                <div class="time">2017/07/05</div>
+                                <div class="title">滿載槍械! 警強勢追車 破窗逮嫌滿載槍械! 警強勢追車 破窗逮嫌滿載槍械! 警強勢追車 破窗逮嫌</div>
+                                <div class="brief">最新民調，蔡總統滿意度跌到三成以下，藍營批評，從勞基法修法、年金前瞻，改革暴衝最新民調，蔡總統滿意度跌到三成以下，藍營批評</div>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="thumb"><img src="images/temp/b17.jpg"/></div>
+                            <div class="info">
+                                <div class="time">2017/07/05</div>
+                                <div class="title">滿載槍械! 警強勢追車 破窗逮嫌滿載槍械! 警強勢追車 破窗逮嫌滿載槍械! 警強勢追車 破窗逮嫌</div>
+                                <div class="brief">最新民調，蔡總統滿意度跌到三成以下，藍營批評，從勞基法修法、年金前瞻，改革暴衝最新民調，蔡總統滿意度跌到三成以下，藍營批評</div>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="thumb"><img src="images/temp/b16.jpg"/></div>
+                            <div class="info">
+                                <div class="time">2017/07/05</div>
+                                <div class="title">滿載槍械! 警強勢追車 破窗逮嫌滿載槍械! 警強勢追車 破窗逮嫌滿載槍械! 警強勢追車 破窗逮嫌</div>
+                                <div class="brief">最新民調，蔡總統滿意度跌到三成以下，藍營批評，從勞基法修法、年金前瞻，改革暴衝最新民調，蔡總統滿意度跌到三成以下，藍營批評</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="social single">
+                <div class="fb-page" data-href="https://www.facebook.com/Ctfansctvnews" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="true"><blockquote cite="https://www.facebook.com/Ctfansctvnews" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Ctfansctvnews">中視新聞</a></blockquote></div>
+
+                <br /><br />
+
+                <a class="ad" href="#">
+                    <img src="images/live_banner.jpg"/>
+                </a>
+                <a class="ad" href="#">
+                    <img src="images/live_banner.jpg"/>
+                </a>
+                <a class="ad" href="#">
+                    <img src="images/live_banner.jpg"/>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="slider" class="anchor">
+        <h2><span>專業主播群</span></h2>
+        <div class="list-area">
+            <div class="list-content">
+                <div class="list">
+                    <a href="#">
+                        <div class="thumb"><img src="images/temp/a1.jpg" /></div>
+                        <div class="title">哈遠儀</div>
+                    </a><a href="#">
+                        <div class="thumb"><img src="images/temp/a1.jpg" /></div>
+                        <div class="title">哈遠儀</div>
+                    </a><a href="#">
+                        <div class="thumb"><img src="images/temp/a1.jpg" /></div>
+                        <div class="title">哈遠儀</div>
+                    </a><a href="#">
+                        <div class="thumb"><img src="images/temp/a1.jpg" /></div>
+                        <div class="title">哈遠儀</div>
+                    </a><a href="#">
+                        <div class="thumb"><img src="images/temp/a1.jpg" /></div>
+                        <div class="title">哈遠儀</div>
+                    </a><a href="#">
+                        <div class="thumb"><img src="images/temp/a1.jpg" /></div>
+                        <div class="title">哈遠儀</div>
+                    </a><a href="#">
+                        <div class="thumb"><img src="images/temp/a1.jpg" /></div>
+                        <div class="title">哈遠儀</div>
+                    </a><a href="#">
+                        <div class="thumb"><img src="images/temp/a1.jpg" /></div>
+                        <div class="title">哈遠儀</div>
+                    </a><a href="#">
+                        <div class="thumb"><img src="images/temp/a1.jpg" /></div>
+                        <div class="title">哈遠儀</div>
+                    </a><a href="#">
+                        <div class="thumb"><img src="images/temp/a1.jpg" /></div>
+                        <div class="title">哈遠儀</div>
+                    </a><a href="#">
+                        <div class="thumb"><img src="images/temp/a1.jpg" /></div>
+                        <div class="title">哈遠儀</div>
+                    </a><a href="#">
+                        <div class="thumb"><img src="images/temp/a1.jpg" /></div>
+                        <div class="title">哈遠儀</div>
+                    </a><a href="#">
+                        <div class="thumb"><img src="images/temp/a1.jpg" /></div>
+                        <div class="title">哈遠儀</div>
+                    </a><a href="#">
+                        <div class="thumb"><img src="images/temp/a1.jpg" /></div>
+                        <div class="title">哈遠儀</div>
+                    </a><a href="#">
+                        <div class="thumb"><img src="images/temp/a1.jpg" /></div>
+                        <div class="title">哈遠儀</div>
+                    </a>
+                </div>
+            </div>
+            <div class="prev"></div>
+            <div class="next"></div>
+            <div class="hint"><img src="images/hint_slide.gif" width="80" height="auto"/></div>
+        </div>
+    </div>  
+
+
+    <div class="footer">
+        <div class="mid">
+            <div class="sitemap">
+                <div>
+                    <a href="#">關於中視</a>
+                    <a href="#">公司簡介</a>
+                    <a href="#">節目表</a>
+                    <a href="#">各處室</a>
+                </div>
+                <div>
+                    <a href="#">公告專區</a>
+                    <a href="#">中視徵才</a>
+                    <a href="#">政令短片</a>
+                    <a href="#">中視倫理委員會</a>
+                    <a href="#">中視新聞自律委員會</a>
+                    <a href="#">2016電視年鑑</a>
+                </div>
+                <div>
+                    <a href="#">聯絡我們</a>
+                    <a href="#">意見信箱</a>
+                    <a href="#">中視觀眾意見處理程序</a>
+                    <a href="#">中視觀眾意見處理公告</a>
+                    <a href="#">中視新聞官方消息公告</a>
+                </div>
+                <div>
+                    <a href="#">友好連結</a>
+                    <a href="#">樂公益</a>
+                    <a href="#">時藝多媒體</a>
+                    <a href="#">中視愛心基金會</a>
+                    <a href="#">公開資訊觀測站</a>
+                    <a href="#">中時電子報</a>
+                    <a href="#">時報旅遊</a>
+                    <a href="#">伊林娛樂</a>
+                </div>
+                <div>
+                    <a href="#">投資人專區</a>
+                    <a href="#">利害關係人專區</a>
+                    <a href="#">投資人關係</a>
+                </div>
+                <div class="social">
+                    <a class="fb" href="#"></a>
+                    <a class="youtube" href="#"></a>
+                </div>
+            </div>
+            <div class="logo">
+                <img src="images/logo_news.png"/>
+            </div>
+        </div>
+        <div class="copyright">
+            <div>中國電視事業股份有限公司版權所有 © China Television Company, Ltd. All Rights Reserved.</div>
+        </div>    
+    </div>
+    <div title="top" id="gotop" class="gotop"></div>
+</body>
+
+</html>
