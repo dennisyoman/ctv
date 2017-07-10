@@ -12,13 +12,13 @@
     <!-- fullscreen webapp -->
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <!-- facebook/orkut -->
-    <meta property="og:title" content="中視新聞" />
+    <meta property="og:title" content="中視戲劇" />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="images/thumb.jpg" />
     <meta property="og:description" content="" />
     <meta name="description" content="" />
     <link rel="image_src" type="image/jpeg" href="images/thumb.jpg" />
-    <title>中視新聞</title>
+    <title>中視戲劇</title>
     <!-- favicon -->
     <link rel="shortcut icon" href="images/favicon.ico">
     <link rel="apple-touch-icon" sizes="152x152" href="images/thumb/apple-touch-icon.png">
@@ -34,8 +34,11 @@
     <!-- javascript -->
     <script type="text/javascript" src="js/jquery-2.1.4.js"></script>
     <script type="text/javascript" src="js/imgLiquid.js"></script>
-    <script type="text/javascript" src="js/hammer.min.js"></script>
     <script type="text/javascript" src="js/web.js"></script>
+
+    <!-- Add fancyBox main JS and CSS files -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.js"></script>
 </head>
 
 <body>
@@ -49,13 +52,13 @@
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 <!-- facebook page -->
-    <div id="header" class="header news">
+    <div id="header" class="header compensate-for-scrollbar">
         <div class="topBar">
             <div class="content">
                 <div class="leftPart">
                     <a class="main" href="#"><span>中視全球資訊網</span></a>
-                    <a class="news active" href="#">新聞</a>
-                    <a class="drama" href="#">戲劇</a>
+                    <a class="news" href="#">新聞</a>
+                    <a class="drama active" href="#">戲劇</a>
                     <a class="show" href="#">綜藝</a>
                 </div>
                 <div class="rightPart">
@@ -67,43 +70,32 @@
                 </div>
             </div>
         </div> 
-        <div class="mid news">
+        <div class="mid">
             <a class="logo" href="./"></a>
-            <div class="category">
-                <div class="list">
-                    <a onclick="doSearch('熱門')" href="#">熱門</a>
-                    <a onclick="doSearch('政治')" href="#">政治</a>
-                    <a onclick="doSearch('社會')" href="#">社會</a>
-                    <a onclick="doSearch('生活')" href="#">生活</a>
-                    <a onclick="doSearch('娛樂')" href="#">娛樂</a>
-                    <a onclick="doSearch('科普')" href="#">科普</a>
-                    <a onclick="doSearch('改變的起點')" href="#">改變的起點</a>
-                </div>
+            <div class="onAirDramas">
+                <a href="#">誅仙青雲誌</a>
+                <a href="#">老九門</a>
+                <a href="#">誅仙青雲誌</a>
+                <a href="#">老九門</a>
+                <a href="#">誅仙青雲誌</a>
+                <a href="#">老九門</a>
             </div>
             <div class="broadcast" id="broadcast">
                 <div class="list">
-                    <a href="#">醉漢擋車敲窗挑釁 遭賓士男毆倒地</a>
-                    <a href="#">惡劣! 借菜農高利貸 討債狠潑漆毀菜園</a>
-                    <a href="#">員工旅遊泡湯 業務私下接單收錢落跑</a>
+                    <a href="#">快訊在這裡1</a>
+                    <a href="#">快訊在這裡2</a>
+                    <a href="#">快訊在這裡3</a>
+                    <a href="#">快訊在這裡4</a>
+                    <a href="#">快訊在這裡5</a>
                 </div>
             </div>
         </div>
     </div>
-
-    <div id="promo" class="promo">
-        <div>
-            <a href="#"><img src="images/temp/b15.jpg"/></a>
-            <a href="#"><img src="images/temp/b14.jpg"/></a>
-            <a href="#"><img src="images/temp/b13.jpg"/></a>
-            <a href="#"><img src="images/temp/b12.jpg"/></a>
-        </div>
-    </div>
-    
-    <div class="threeColumn mode_news">
-        <div class="double">
-            <div class="breaking news search">
+    <div class="threeColumn">
+        <div class="double">   
+            <div class="breaking drama search">
                 <div class="title">
-                    <h2>政治</h2>
+                    <h2>紹庭</h2>
                     <h3>Last update : 2017/07/05</h3>
                 </div>
                 <div class="list">
@@ -277,20 +269,13 @@
                     <a class="next" href="#"></a>
                 </div>
             </div>
-
         </div>
-        <div class="single">
-            
-            <a class="ad" href="#">
-                <img src="images/live_banner.jpg"/>
-            </a>
-            
-            <div style="text-align: center;" >
-            <div class="fb-page" data-href="https://www.facebook.com/Ctfansctvnews" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="true"><blockquote cite="https://www.facebook.com/Ctfansctvnews" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Ctfansctvnews">中視新聞</a></blockquote></div>
-            </div>
 
+        <div class="social single">
+            <div class="fb-page" data-href="https://www.facebook.com/Ctfansctvdrama" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="true"><blockquote cite="https://www.facebook.com/Ctfansctvdrama" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Ctfansctvdrama">中視戲劇</a></blockquote></div>
         </div>
     </div>
+    
 
     <div class="footer">
         <div class="mid">
@@ -337,7 +322,7 @@
                 </div>
             </div>
             <div class="logo">
-                <img src="images/logo_news.png"/>
+                <img src="images/logo.png"/>
             </div>
         </div>
         <div class="copyright">

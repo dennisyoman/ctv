@@ -1,0 +1,246 @@
+<!DOCTYPE>
+<!-- saved from url=(0014)about:internet -->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keyword" lang="en" content="" />
+    <meta name="keywords" lang="en" content="" />
+    <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+    <!-- 修正iPhone旋轉放大 -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- fullscreen webapp -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!-- facebook/orkut -->
+    <meta property="og:title" content="中視新聞" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="images/thumb.jpg" />
+    <meta property="og:description" content="" />
+    <meta name="description" content="" />
+    <link rel="image_src" type="image/jpeg" href="images/thumb.jpg" />
+    <title>中視新聞</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="152x152" href="images/thumb/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/thumb/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/thumb/favicon-16x16.png">
+    <link rel="manifest" href="images/thumb/manifest.json">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="theme-color" content="#ffffff">
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" rev="stylesheet" media="screen" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" rev="stylesheet" media="screen" href="css/layout.css" />
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <!-- javascript -->
+    <script type="text/javascript" src="js/jquery-2.1.4.js"></script>
+    <script type="text/javascript" src="js/imgLiquid.js"></script>
+    <script type="text/javascript" src="js/hammer.min.js"></script>
+    <script type="text/javascript" src="js/web.js"></script>
+</head>
+
+<body>
+<!-- facebook page -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v2.9&appId=255633044548036";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<!-- facebook page -->
+    <div id="header" class="header news">
+        <div class="topBar">
+            <div class="content">
+                <div class="leftPart">
+                    <a class="main" href="#"><span>中視全球資訊網</span></a>
+                    <a class="news active" href="#">新聞</a>
+                    <a class="drama" href="#">戲劇</a>
+                    <a class="show" href="#">綜藝</a>
+                </div>
+                <div class="rightPart">
+                    <a href="#">節目表</a>
+                    <a href="#">自律委員會</a>
+                    <div class="search">
+                        <span onclick="doSearch('')"></span><input id="search_input" type="text" name="search">
+                    </div>
+                </div>
+            </div>
+        </div> 
+        <div class="mid news">
+            <a class="logo" href="./"></a>
+            <div class="category">
+                <div class="list">
+                    <a onclick="doSearch('熱門')" href="#">熱門</a>
+                    <a onclick="doSearch('政治')" href="#">政治</a>
+                    <a onclick="doSearch('社會')" href="#">社會</a>
+                    <a onclick="doSearch('生活')" href="#">生活</a>
+                    <a onclick="doSearch('娛樂')" href="#">娛樂</a>
+                    <a onclick="doSearch('科普')" href="#">科普</a>
+                    <a onclick="doSearch('改變的起點')" href="#">改變的起點</a>
+                </div>
+            </div>
+            <div class="broadcast" id="broadcast">
+                <div class="list">
+                    <a href="#">醉漢擋車敲窗挑釁 遭賓士男毆倒地</a>
+                    <a href="#">惡劣! 借菜農高利貸 討債狠潑漆毀菜園</a>
+                    <a href="#">員工旅遊泡湯 業務私下接單收錢落跑</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="promo" class="promo">
+        <div>
+            <a href="#"><img src="images/temp/b15.jpg"/></a>
+            <a href="#"><img src="images/temp/b14.jpg"/></a>
+            <a href="#"><img src="images/temp/b13.jpg"/></a>
+            <a href="#"><img src="images/temp/b12.jpg"/></a>
+        </div>
+    </div>
+    
+    <div class="threeColumn mode_news">
+        <div class="double">
+            <div class="anchor_info">
+                <div class="profile">
+                    <div class="thumb"><img src="images/temp/Angela.jpg" /></div>
+                    <div class="title">
+                        <h3>主播</h3>
+                        <h2>哈遠儀<span>Angela</span></h2>
+                        <p><span>生日</span>5月29日</p>
+                        <p><span>星座</span>雙子座</p>
+                        <p><span>血型</span>A</p>
+                    </div>
+                </div>
+                <div class="extra">
+                    <h3>學歷 / education</h3>
+                    <div>
+                        <p>台大新聞研究所畢、台大經濟系、中山女中</p>
+                    </div>
+                    <h3>經歷 / experience</h3>
+                    <div>
+                        <p>十二年新聞生涯，曾服務於財經、國際、政治、生活、地方及播報中心，採訪外交、立院、教育、醫藥等新聞與專題報導。最亢奮的是每次在選前之夜聲嘶力竭地連線；最刺激的是在峇里島海邊跳下四十公尺高台，只為錄一段高空彈跳畫面；最難忘的是從頭到尾隨行採訪紅杉軍，完整記錄台灣史上第一次群眾聚集街頭超過一個月的社會運動；最感動的是聆聽漸凍病患家屬娓娓敘述磨難中的大愛，並藉由採訪，間接促成台中醫院曙光病房加速落成啟用；最意外的是在民國一百年年底接下｢中視新聞全球報導｣，迎接全新的使命和挑戰。</p>
+                    </div>
+                    <h3>休閒 / hobby</h3>
+                    <div>
+                        <p>喜歡唱歌、讀小說、看電影。年少時的偶像是鄧麗君、張雨生和薛岳。現在休假最常學習下廚。</p>
+                    </div>
+                    <h3>其他 / other</h3>
+                    <div>
+                        <p>》現任職位：專任主播</p>
+                        <p>》主要播報時段：中視新聞全球報導、中視新聞全球報導6點30最前線</p>
+                        <p>》FB粉絲團： <a href="#">http://www.facebook.com/AngelaHa0529</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="single">
+            <div class="anchorList">
+                <div class="list">
+                    <a href="#">
+                        <div class="thumb"><img src="images/temp/Angela.jpg" /></div>
+                        <div class="title">哈遠儀</div>
+                    </a><a href="#">
+                        <div class="thumb"><img src="images/temp/Juliet.jpg" /></div>
+                        <div class="title">蕭惠文</div>
+                    </a><a href="#">
+                        <div class="thumb"><img src="images/temp/Sharon.jpg" /></div>
+                        <div class="title">侯乃榕</div>
+                    </a><a href="#">
+                        <div class="thumb"><img src="images/temp/Hazel.jpg" /></div>
+                        <div class="title">林慧蓉</div>
+                    </a><a href="#">
+                        <div class="thumb"><img src="images/temp/Irene.jpg" /></div>
+                        <div class="title">鍾季容</div>
+                    </a><a href="#">
+                        <div class="thumb"><img src="images/temp/didi.jpg" /></div>
+                        <div class="title">方彥廸</div>
+                    </a><a href="#">
+                        <div class="thumb"><img src="images/temp/eva.jpg" /></div>
+                        <div class="title">李佳玲</div>
+                    </a><a href="#">
+                        <div class="thumb"><img src="images/temp/news240x320-141107-3.jpg" /></div>
+                        <div class="title">陳志耕</div>
+                    </a><a href="#">
+                        <div class="thumb"><img src="images/temp/news240x320-160907-2.jpg" /></div>
+                        <div class="title">張以仁</div>
+                    </a><a href="#">
+                        <div class="thumb"><img src="images/temp/news240x320-Raymond.jpg" /></div>
+                        <div class="title">郭岱軒</div>
+                    </a><a href="#">
+                        <div class="thumb"><img src="images/temp/news240x320-160907-1.jpg" /></div>
+                        <div class="title">蔣育圻</div>
+                    </a><a href="#">
+                        <div class="thumb"><img src="images/temp/news240x320-160907-3.jpg" /></div>
+                        <div class="title">劉品薇</div>
+                    </a>
+                </div>
+            </div>
+
+            <a class="ad" href="#">
+                <img src="images/live_banner.jpg"/>
+            </a>
+            
+            <div style="text-align: center;" >
+            <div class="fb-page" data-href="https://www.facebook.com/Ctfansctvnews" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="true"><blockquote cite="https://www.facebook.com/Ctfansctvnews" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Ctfansctvnews">中視新聞</a></blockquote></div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="mid">
+            <div class="sitemap">
+                <div>
+                    <a href="#">關於中視</a>
+                    <a href="#">公司簡介</a>
+                    <a href="#">節目表</a>
+                    <a href="#">各處室</a>
+                </div>
+                <div>
+                    <a href="#">公告專區</a>
+                    <a href="#">中視徵才</a>
+                    <a href="#">政令短片</a>
+                    <a href="#">中視倫理委員會</a>
+                    <a href="#">中視新聞自律委員會</a>
+                    <a href="#">2016電視年鑑</a>
+                </div>
+                <div>
+                    <a href="#">聯絡我們</a>
+                    <a href="#">意見信箱</a>
+                    <a href="#">中視觀眾意見處理程序</a>
+                    <a href="#">中視觀眾意見處理公告</a>
+                    <a href="#">中視新聞官方消息公告</a>
+                </div>
+                <div>
+                    <a href="#">友好連結</a>
+                    <a href="#">樂公益</a>
+                    <a href="#">時藝多媒體</a>
+                    <a href="#">中視愛心基金會</a>
+                    <a href="#">公開資訊觀測站</a>
+                    <a href="#">中時電子報</a>
+                    <a href="#">時報旅遊</a>
+                    <a href="#">伊林娛樂</a>
+                </div>
+                <div>
+                    <a href="#">投資人專區</a>
+                    <a href="#">利害關係人專區</a>
+                    <a href="#">投資人關係</a>
+                </div>
+                <div class="social">
+                    <a class="fb" href="#"></a>
+                    <a class="youtube" href="#"></a>
+                </div>
+            </div>
+            <div class="logo">
+                <img src="images/logo_news.png"/>
+            </div>
+        </div>
+        <div class="copyright">
+            <div>中國電視事業股份有限公司版權所有 © China Television Company, Ltd. All Rights Reserved.</div>
+        </div>    
+    </div>
+    <div title="top" id="gotop" class="gotop"></div>
+</body>
+
+</html>
