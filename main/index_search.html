@@ -12,13 +12,13 @@
     <!-- fullscreen webapp -->
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <!-- facebook/orkut -->
-    <meta property="og:title" content="中視綜藝" />
+    <meta property="og:title" content="中視全球資訊網" />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="images/thumb.jpg" />
     <meta property="og:description" content="" />
     <meta name="description" content="" />
     <link rel="image_src" type="image/jpeg" href="images/thumb.jpg" />
-    <title>中視綜藝</title>
+    <title>中視全球資訊網</title>
     <!-- favicon -->
     <link rel="shortcut icon" href="images/favicon.ico">
     <link rel="apple-touch-icon" sizes="152x152" href="images/thumb/apple-touch-icon.png">
@@ -34,11 +34,8 @@
     <!-- javascript -->
     <script type="text/javascript" src="js/jquery-2.1.4.js"></script>
     <script type="text/javascript" src="js/imgLiquid.js"></script>
+    <script type="text/javascript" src="js/hammer.min.js"></script>
     <script type="text/javascript" src="js/web.js"></script>
-
-    <!-- Add fancyBox main JS and CSS files -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.js"></script>
 </head>
 
 <body>
@@ -52,14 +49,37 @@
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 <!-- facebook page -->
-    <div id="header" class="header show">
-        <div class="topBar">
+    <div id="header" class="header search_index">
+        <div class="topBar index">
             <div class="content">
                 <div class="leftPart">
-                    <a class="main" href="#"><span>中視全球資訊網</span></a>
-                    <a class="news" href="#">新聞</a>
-                    <a class="drama" href="#">戲劇</a>
-                    <a class="show active" href="#">綜藝</a>
+                    <div>
+                        <a class="main" href="#"><span>中視全球資訊網</span></a>
+                    </div>
+                    <div>
+                        <a class="news" href="#">新聞</a>
+                        <div class="sub">
+                            <a href="#">酒駕新法上路引民怨</a>
+                            <a href="#">前瞻計畫藍綠齊杯葛</a>
+                            <a href="#">蔡英文總統前瞻親上火線</a>
+                        </div>
+                    </div>
+                    <div>
+                        <a class="drama" href="#">戲劇</a>
+                        <div class="sub">
+                            <a href="#">諸仙青雲誌</a>
+                            <a href="#">九尾胡</a>
+                            <a href="#">愛的不是你</a>
+                        </div>
+                    </div>
+                    <div>
+                        <a class="show" href="#">綜藝</a>
+                        <div class="sub">
+                            <a href="#">飢餓遊戲</a>
+                            <a href="#">名模生死鬥</a>
+                            <a href="#">前進日本</a>
+                        </div>
+                    </div>
                 </div>
                 <div class="rightPart">
                     <a href="#">節目表</a>
@@ -70,20 +90,13 @@
                 </div>
             </div>
         </div> 
-        <div class="mid">
-            <a class="logo" href="./"></a>
-            <div class="onAirDramas">
-                <a href="#">飢餓遊戲</a>
-                <a href="#">綜藝玩很大</a>
-                <a href="#">名模星任務</a>
-            </div>
+        <div class="mid index">
+            <a class="logo" href="./"><img src="images/ctv_logo.gif"/></a>
             <div class="broadcast" id="broadcast">
                 <div class="list">
-                    <a href="#">快訊在這裡1</a>
-                    <a href="#">快訊在這裡2</a>
-                    <a href="#">快訊在這裡3</a>
-                    <a href="#">快訊在這裡4</a>
-                    <a href="#">快訊在這裡5</a>
+                    <a class="drama" href="#">【一把青】6/9起~中視週一至週五 晚上9:00首播</a>
+                    <a class="news" href="#">為解救啟山，齊鐵嘴決定帶他前往東北張家！</a>
+                    <a class="show" href="#">郭軫被大隊長處罰，在炙熱的天氣下在機場拖飛機</a>
                 </div>
             </div>
         </div>
@@ -189,10 +202,18 @@
         </div>
 
         <div class="social single">
-            <div class="fb-page" data-href="https://www.facebook.com/Ctfansctvshow" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="true"><blockquote cite="https://www.facebook.com/Ctfansctvshow" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Ctfansctvshow">中視綜藝</a></blockquote></div>
-        </div>
+                <div class="head">
+                    <h2>粉絲專頁</h2>
+                </div>
+                <div class="fb-page" data-href="https://www.facebook.com/Ctfansctvdrama" data-small-header="false" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="false"><blockquote cite="https://www.facebook.com/Ctfansctvdrama" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Ctfansctvdrama">中視戲劇</a></blockquote></div>
+                <br /><br />
+                <div class="fb-page" data-href="https://www.facebook.com/Ctfansctvshow" data-small-header="false" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="false"><blockquote cite="https://www.facebook.com/Ctfansctvshow" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Ctfansctvshow">中視綜藝</a></blockquote></div>
+                <br /><br />
+                <div class="fb-page" data-href="https://www.facebook.com/Ctfansctvnews" data-small-header="false" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="false"><blockquote cite="https://www.facebook.com/Ctfansctvnews" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Ctfansctvnews">中視新聞</a></blockquote></div>
+            </div>
     </div>
-
+    
+    
     <div class="footer">
         <div class="mid">
             <div class="sitemap">
@@ -238,7 +259,7 @@
                 </div>
             </div>
             <div class="logo">
-                <img src="images/logo_show.png"/>
+                <img src="images/ctv_logo.png"/>
             </div>
         </div>
         <div class="copyright">
