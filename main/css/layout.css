@@ -4774,23 +4774,27 @@ body {
   margin-right: 5px;
   color: #f46f22;
 }
-/* line 4678, ../sass/layout.scss */
+/* line 4677, ../sass/layout.scss */
+.programList .channels a.active:hover {
+  color: #ddd;
+}
+/* line 4682, ../sass/layout.scss */
 .programList .channels a:hover {
   color: #000;
 }
-/* line 4684, ../sass/layout.scss */
+/* line 4688, ../sass/layout.scss */
 .programList ::-webkit-scrollbar {
   display: none;
 }
-/* line 4688, ../sass/layout.scss */
+/* line 4692, ../sass/layout.scss */
 .programList .daysBox {
   overflow: auto;
 }
-/* line 4691, ../sass/layout.scss */
+/* line 4695, ../sass/layout.scss */
 .programList .daysBox .days {
   display: flex;
 }
-/* line 4694, ../sass/layout.scss */
+/* line 4698, ../sass/layout.scss */
 .programList .daysBox .days a {
   font-size: 14px;
   letter-spacing: 0.1em;
@@ -4804,53 +4808,53 @@ body {
   min-width: 100px;
   background: #333;
 }
-/* line 4707, ../sass/layout.scss */
+/* line 4711, ../sass/layout.scss */
 .programList .daysBox .days a:last-child {
   border-right: none;
 }
-/* line 4711, ../sass/layout.scss */
+/* line 4715, ../sass/layout.scss */
 .programList .daysBox .days a span {
   display: block;
   font-size: 18px;
   line-height: 30px;
   font-weight: bold;
 }
-/* line 4718, ../sass/layout.scss */
+/* line 4722, ../sass/layout.scss */
 .programList .daysBox .days a.active {
   color: #f46f22;
   border-bottom: 5px solid #f46f22;
 }
-/* line 4723, ../sass/layout.scss */
+/* line 4727, ../sass/layout.scss */
 .programList .daysBox .days a:hover {
   color: #fff;
 }
-/* line 4730, ../sass/layout.scss */
+/* line 4734, ../sass/layout.scss */
 .programList ul.list {
   border-top: 1px solid #666;
 }
-/* line 4733, ../sass/layout.scss */
+/* line 4737, ../sass/layout.scss */
 .programList ul.list li {
   background: #fff;
   display: flex;
 }
-/* line 4739, ../sass/layout.scss */
+/* line 4743, ../sass/layout.scss */
 .programList ul.list li:hover > div a {
   color: #f46f22;
   text-decoration: underline;
 }
-/* line 4748, ../sass/layout.scss */
+/* line 4752, ../sass/layout.scss */
 .programList ul.list li:last-child > div:nth-child(1) {
   border-bottom: 1px solid #ccc;
 }
-/* line 4752, ../sass/layout.scss */
+/* line 4756, ../sass/layout.scss */
 .programList ul.list li:last-child > div:nth-child(2) {
   border-bottom: 1px solid #ccc;
 }
-/* line 4756, ../sass/layout.scss */
+/* line 4760, ../sass/layout.scss */
 .programList ul.list li:last-child > div:nth-child(3) {
   border-bottom: 1px solid #ccc;
 }
-/* line 4762, ../sass/layout.scss */
+/* line 4766, ../sass/layout.scss */
 .programList ul.list li > div {
   float: left;
   -webkit-box-sizing: border-box;
@@ -4862,7 +4866,7 @@ body {
   letter-spacing: 0.1em;
   align-items: stretch;
 }
-/* line 4773, ../sass/layout.scss */
+/* line 4777, ../sass/layout.scss */
 .programList ul.list li > div:nth-child(1) {
   width: 90px;
   text-align: center;
@@ -4870,7 +4874,7 @@ body {
   color: #fff;
   border-bottom: 1px solid #666;
 }
-/* line 4781, ../sass/layout.scss */
+/* line 4785, ../sass/layout.scss */
 .programList ul.list li > div:nth-child(2) {
   width: calc(100% - 160px);
   font-size: 18px;
@@ -4878,7 +4882,7 @@ body {
   border-bottom: 1px solid #eee;
   padding: 15px 15px;
 }
-/* line 4789, ../sass/layout.scss */
+/* line 4793, ../sass/layout.scss */
 .programList ul.list li > div:nth-child(3) {
   width: 70px;
   text-align: center;
@@ -4886,17 +4890,17 @@ body {
   color: #fff;
   border-bottom: 1px solid #bbb;
 }
-/* line 4796, ../sass/layout.scss */
+/* line 4800, ../sass/layout.scss */
 .programList ul.list li > div:nth-child(3)::after {
   content: "集";
 }
-/* line 4801, ../sass/layout.scss */
+/* line 4805, ../sass/layout.scss */
 .programList ul.list li > div a {
   display: block;
   color: #666;
   text-decoration: none;
 }
-/* line 4808, ../sass/layout.scss */
+/* line 4812, ../sass/layout.scss */
 .programList ul.list li::after {
   content: "";
   display: block;
