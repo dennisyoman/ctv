@@ -12,13 +12,13 @@
     <!-- fullscreen webapp -->
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <!-- facebook/orkut -->
-    <meta property="og:title" content="中視新聞" />
+    <meta property="og:title" content="中視全球資訊網" />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="images/thumb.jpg" />
     <meta property="og:description" content="" />
     <meta name="description" content="" />
     <link rel="image_src" type="image/jpeg" href="images/thumb.jpg" />
-    <title>中視新聞</title>
+    <title>中視全球資訊網</title>
     <!-- favicon -->
     <link rel="shortcut icon" href="images/favicon.ico">
     <link rel="apple-touch-icon" sizes="152x152" href="images/thumb/apple-touch-icon.png">
@@ -49,14 +49,37 @@
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 <!-- facebook page -->
-    <div id="header" class="header news">
-        <div class="topBar">
+    <div id="header" class="header search_index">
+        <div class="topBar index">
             <div class="content">
                 <div class="leftPart">
-                    <a class="main" href="#"><span>中視全球資訊網</span></a>
-                    <a class="news active" href="#">新聞</a>
-                    <a class="drama" href="#">戲劇</a>
-                    <a class="show" href="#">綜藝</a>
+                    <div>
+                        <a class="main" href="#"><span>中視全球資訊網</span></a>
+                    </div>
+                    <div>
+                        <a class="news" href="#">新聞</a>
+                        <div class="sub">
+                            <a href="#">酒駕新法上路引民怨</a>
+                            <a href="#">前瞻計畫藍綠齊杯葛</a>
+                            <a href="#">蔡英文總統前瞻親上火線</a>
+                        </div>
+                    </div>
+                    <div>
+                        <a class="drama" href="#">戲劇</a>
+                        <div class="sub">
+                            <a href="#">諸仙青雲誌</a>
+                            <a href="#">九尾胡</a>
+                            <a href="#">愛的不是你</a>
+                        </div>
+                    </div>
+                    <div>
+                        <a class="show" href="#">綜藝</a>
+                        <div class="sub">
+                            <a href="#">飢餓遊戲</a>
+                            <a href="#">名模生死鬥</a>
+                            <a href="#">前進日本</a>
+                        </div>
+                    </div>
                 </div>
                 <div class="rightPart">
                     <a href="#">節目表</a>
@@ -67,48 +90,31 @@
                 </div>
             </div>
         </div> 
-        <div class="mid news">
-            <a class="logo" href="./"></a>
-            <div class="category">
-                <div class="list">
-                    <a onclick="doSearch('熱門')" href="#">熱門</a>
-                    <a onclick="doSearch('政治')" href="#">政治</a>
-                    <a onclick="doSearch('社會')" href="#">社會</a>
-                    <a onclick="doSearch('生活')" href="#">生活</a>
-                    <a onclick="doSearch('娛樂')" href="#">娛樂</a>
-                    <a onclick="doSearch('科普')" href="#">科普</a>
-                    <a onclick="doSearch('改變的起點')" href="#">改變的起點</a>
-                </div>
-            </div>
+        <div class="mid index">
+            <a class="logo" href="./"><img src="images/ctv_logo.gif"/></a>
             <div class="broadcast" id="broadcast">
                 <div class="list">
-                    <a href="#">醉漢擋車敲窗挑釁 遭賓士男毆倒地</a>
-                    <a href="#">惡劣! 借菜農高利貸 討債狠潑漆毀菜園</a>
-                    <a href="#">員工旅遊泡湯 業務私下接單收錢落跑</a>
+                    <a class="drama" href="#">【一把青】6/9起~中視週一至週五 晚上9:00首播</a>
+                    <a class="news" href="#">為解救啟山，齊鐵嘴決定帶他前往東北張家！</a>
+                    <a class="show" href="#">郭軫被大隊長處罰，在炙熱的天氣下在機場拖飛機</a>
                 </div>
             </div>
         </div>
     </div>
-
-    <div id="promo" class="promo">
-        <div>
-            <a href="#"><img src="images/temp/b15.jpg"/></a>
-            <a href="#"><img src="images/temp/b14.jpg"/></a>
-            <a href="#"><img src="images/temp/b13.jpg"/></a>
-            <a href="#"><img src="images/temp/b12.jpg"/></a>
-        </div>
-    </div>
-    
-    <div class="threeColumn mode_news">
+   
+    <div class="threeColumn">
         <div class="single">
-            <div class="editorTitle reveal">
-                <h2>爆料專區</h2>
-                <h3>路見不平 人人有責</h3>
+            <div class="editorTitle advice">
+                <h2>意見信箱</h2>
+                <p>感謝您長久以來對中國電視公司的支持與愛護，而您的批評是我們成長的力量與方向，若您對我們公司有任何的批評和建議，請您將您的意見寄給我們，我們將會有專人為您處理及答覆信件，謝謝您！<br /><br />
+                觀眾服務專線：<span onclick="location.href='tel:0800012258'">0800-012258</span><br />
+                公司總機: <span onclick="location.href='tel:0227838308'">02-27838308</span><br />
+                客服傳真: <span onclick="location.href='tel:0227896678'">02-27896678</span></p>
+                <a href="index_survey.html">客服問卷</a>
             </div>
         </div>
         <div class="double">
             <div class="formArea">
-                <p>* 為必填欄位</p>
                 <form>
                     <fieldset>
                         <div class="label name">
@@ -119,21 +125,59 @@
                             <h3>電話 / Phone <span>*</span></h3>
                             <input type="text" id="phone" name="phone"/>
                         </div>
+                        <div class="label name">
+                            <h3>性別 / Sex <span>*</span></h3>
+                            <select name="sex" id="sex" required>
+                                <option value="" selected disabled>---請選擇---</option>
+                                <option value="1">男</option>
+                                <option value="2">女</option>
+                            </select>
+                        </div>
+                        <div class="label phone">
+                            <h3>年齡 / Age <span>*</span></h3>
+                            <select name="age" id="age" required>
+                                <option value="" selected disabled>---請選擇---</option>
+                                <option value="1">14歲以下</option>
+                                <option value="2">15~24歲</option>
+                                <option value="3">25~34歲</option>
+                                <option value="4">35~44歲</option>
+                                <option value="5">44~54歲</option>
+                                <option value="6">55歲以上</option>
+                            </select>
+                        </div>
+                        
                         <div class="label">
-                            <h3>電子郵件 / Email</h3>
+                            <h3>電子郵件 / Email <span>*</span></h3>
                             <input type="text" id="email" name="email"/>
                         </div>
                         <div class="label">
-                            <h3>爆料主旨 / Subject <span>*</span></h3>
-                            <input type="text" id="subject" name="subject"/>
+                            <h3>聯絡地址 / Address <span>*</span></h3>
+                            <input type="text" id="address" name="address"/>
+                        </div>
+                        <div class="label name">
+                            <h3>反應單位 <span>*</span></h3>
+                            <select name="department" id="department" required>
+                                <option value="" selected disabled>---請選擇---</option>
+                                <option value="1">新聞部</option>
+                                <option value="2">節目部</option>
+                                <option value="3">工程部</option>
+                                <option value="4">其他</option>
+                            </select>
+                        </div>
+                        <div class="label phone">
+                            <h3>反應項目 <span>*</span></h3>
+                            <select name="item" id="item" required>
+                                <option value="" selected disabled>---請選擇---</option>
+                                <option value="1">詢問</option>
+                                <option value="2">建議</option>
+                                <option value="3">抱怨</option>
+                                <option value="4">評論</option>
+                                <option value="5">肯定</option>
+                            </select>
                         </div>
                         <div class="label">
-                            <h3>爆料內容 / Message <span>*</span></h3>
+                            <h3>您的建議 / Message <span>*</span></h3>
                             <textarea id="msg" name="msg"></textarea>
-                        </div>
-                        <div class="label">
-                            <h3>影片連結 / Video Link</h3>
-                            <input type="text" id="link" name="link"/>
                         </div>
                         <!--
                         <div class="label">
@@ -148,7 +192,7 @@
 
         </div>
     </div>
-
+    
     <div class="footer">
         <div class="mid">
             <div class="sitemap">
@@ -194,7 +238,7 @@
                 </div>
             </div>
             <div class="logo">
-                <img src="images/logo_news.png"/>
+                <img src="images/ctv_logo.png"/>
             </div>
         </div>
         <div class="copyright">
@@ -282,8 +326,30 @@ var validateMail = function(){
         $mistake+=1;
     }
 
+    if(!$('select[name="sex"]').val()){
+        $('select[name="sex"]').parent().addClass("wrong");
+        if($mistake==0){
+            $boddy.animate({scrollTop: $('select[name="sex"]').eq(0).offset().top-$fromtop}, 600);   
+            $('select[name="sex"]').focus(); 
+        }
+        $mistake+=1;
+    }
+    if(!$('select[name="age"]').val()){
+        $('select[name="age"]').parent().addClass("wrong");
+        if($mistake==0){
+            $boddy.animate({scrollTop: $('select[name="age"]').eq(0).offset().top-$fromtop}, 600);   
+            $('select[name="age"]').focus(); 
+        }
+        $mistake+=1;
+    }
+
     if(!$('input[name="email"]').val()){
-        
+        $('input[name="email"]').parent().addClass("wrong");
+        if($mistake==0){
+            $boddy.animate({scrollTop: $('input[name="email"]').eq(0).offset().top-$fromtop}, 600); 
+            $('input[name="email"]').focus();
+        }
+        $mistake+=1;
     }else{
         if(!isEmail($('input[name="email"]').val())){
             $('input[name="email"]').parent().addClass("wrong");
@@ -297,11 +363,28 @@ var validateMail = function(){
     }
     
 
-    if(!$('input[name="subject"]').val()){
-        $('input[name="subject"]').parent().addClass("wrong");
+    if(!$('input[name="address"]').val()){
+        $('input[name="address"]').parent().addClass("wrong");
         if($mistake==0){
-            $boddy.animate({scrollTop: $('input[name="subject"]').eq(0).offset().top-$fromtop}, 600);  
-            $('input[name="subject"]').focus();       
+            $boddy.animate({scrollTop: $('input[name="address"]').eq(0).offset().top-$fromtop}, 600);  
+            $('input[name="address"]').focus();       
+        }
+        $mistake+=1;
+    }
+
+    if(!$('select[name="department"]').val()){
+        $('select[name="department"]').parent().addClass("wrong");
+        if($mistake==0){
+            $boddy.animate({scrollTop: $('select[name="department"]').eq(0).offset().top-$fromtop}, 600);   
+            $('select[name="department"]').focus(); 
+        }
+        $mistake+=1;
+    }
+    if(!$('select[name="item"]').val()){
+        $('select[name="item"]').parent().addClass("wrong");
+        if($mistake==0){
+            $boddy.animate({scrollTop: $('select[name="item"]').eq(0).offset().top-$fromtop}, 600);   
+            $('select[name="item"]').focus(); 
         }
         $mistake+=1;
     }
@@ -330,5 +413,3 @@ var validateMail = function(){
 </script>
 
 </html>
-
-
