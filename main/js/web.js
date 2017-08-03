@@ -264,13 +264,26 @@ $(document).ready(
         if ($("#bookmark").length > 0) {
             var $filterBtns = $("#bookmark").find('.filter div');
             var $lists = $("#bookmark").find('.list > div');
-            var $bookmark_id=0;
+            //var $bookmark_id=0;
 
             $filterBtns.click(function() {
                 $(this).addClass('active').siblings('.active').removeClass('active');
                 $lists.eq($(this).index()).addClass('active').siblings('.active').removeClass('active');
             }).eq(0).click();
         }
+ 
+        //programList
+        if ($("#programList").length > 0) {
+            var $programBtns = $("#programList").find('.filter div');
+            var $programLists = $("#programList").find('.list > div');
+            //var $bookmark_id=0;
+
+            $programBtns.click(function() {
+                $(this).addClass('active').siblings('.active').removeClass('active');
+                $programLists.eq($(this).index()).addClass('active').siblings('.active').removeClass('active');
+            }).eq(0).click();
+        }
+
         //character
         if ($("#character").length > 0) {
             var $charAmount = $("#character").find('.characterList > div').length;
