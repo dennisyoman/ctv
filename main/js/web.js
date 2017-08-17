@@ -63,6 +63,15 @@ $(document).ready(
             var tar2 = $("#topics .btns .list").eq(0).find("a").eq($topicId);
             tar2.addClass("selected").siblings(".selected").removeClass("selected");
 
+            //move list
+            if (autoPlayTopic) {
+                $("#topics .btns").eq(0).animate({
+                    scrollTop: $topicId*($("#topics .btns .list").height()*0.22+1),
+                    scrollLeft: $topicId*($("#topics .btns .list").width()*0.30+1)
+                }, 500);
+            }
+            
+
             //define info
             var title = tar.attr("title");
             var link = tar.attr("href");
@@ -89,27 +98,23 @@ $(document).ready(
             var nextIndex = $("#banner_index").find(".next").eq(0);
             var prevIndex = $("#banner_index").find(".prev").eq(0);
             var btnList = $("#banner_index .btns .list ul").eq(0);
-            var $indexBtnsID=0;
+
             
             //prevIndex.hide();
             //nextIndex.hide();
 
   
             nextIndex.click(function() {
-                //console.log(parseInt(btnList.css("left")) + btnList.prop('scrollWidth'));
-                //console.log(btnList.width());
                 if (parseInt(btnList.css("left")) + btnList.prop('scrollWidth') > btnList.parent().width()) {
                     var containWIndex = $("#banner_index").find(".btns").eq(0).width();
-                    $indexBtnsID += 1;
-                    btnList.css("left", $indexBtnsID * containWIndex * -1);
+
+                    btnList.css("left", parseInt(btnList.css("left"))-containWIndex);
                 }
             });
             prevIndex.click(function() {
-                if ($indexBtnsID > 0) {
                     var containWIndex = btnList.parent().width();
-                    $indexBtnsID -= 1;
-                    btnList.css("left", $indexBtnsID * containWIndex * -1);
-                }
+                    var tl = parseInt(btnList.css("left"))+containWIndex;
+                    btnList.css("left", tl<0?parseInt(btnList.css("left"))+containWIndex:0);
             });
 
             //add Btnd
@@ -143,6 +148,20 @@ $(document).ready(
 
             var tar2 = $("#banner_index .btns > .list ul").eq(0).find("li").eq($bannerIndexId);
             tar2.addClass("selected").siblings(".selected").removeClass("selected");
+
+            //move list
+            if (autoPlayIndex) {
+                if(window.innerWidth < 850){
+                    btnList.css("left", 0);
+                    $("#banner_index .btns > .list").eq(0).animate({
+                        scrollLeft: "+="+tar2.offset().left
+                    }, 500);
+                }else{
+                    $("#banner_index .btns > .list").eq(0).scrollLeft(0);
+                    btnList.css("left", $("#banner_index .btns > .list ul").offset().left - tar2.offset().left);
+                    
+                }
+            }
 
             //define info
             var title = tar.attr("title");
