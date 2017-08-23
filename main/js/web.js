@@ -596,6 +596,17 @@ function atTopDetect() {
 
 
 function resizeScreen() {
+    //
+    $('.populor .list > a').each(function(index){
+        $(this).removeClass("oversize").addClass("reallength");
+        if ($(this)[0].scrollWidth >  $(this).innerWidth()) {
+            $(this).addClass("oversize").removeClass("reallength");
+        }else{
+            $(this).removeClass("oversize").removeClass("reallength");
+        }
+    });
+    
+
     atTopDetect();
     if ($("#gallery").length > 0) {
         afterImgLoad();

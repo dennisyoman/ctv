@@ -2817,13 +2817,29 @@ body {
   letter-spacing: 0.1em;
   line-height: 1.5;
   height: 27px;
-  overflow: hidden;
-  text-overflow: ellipsis;
   text-decoration: none;
   margin-bottom: 15px;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 1;
+  position: relative;
+  text-align: justify;
+  overflow: hidden;
+}
+.threeColumn .populor .list a.reallength {
+  white-space: nowrap;
+  overflow: visible;
+}
+.threeColumn .populor .list a.oversize {
+  padding-right: 25px;
+  overflow: hidden;
+}
+.threeColumn .populor .list a.oversize::after {
+  content: "...";
+  height: 27px;
+  line-height: inherit;
+  width: 25px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  text-align: right;
 }
 .threeColumn .populor .list a:hover {
   text-decoration: underline;
