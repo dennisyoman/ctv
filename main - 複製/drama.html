@@ -1,0 +1,420 @@
+<!DOCTYPE>
+<!-- saved from url=(0014)about:internet -->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keyword" lang="en" content="" />
+    <meta name="keywords" lang="en" content="" />
+    <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+    <!-- 修正iPhone旋轉放大 -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- fullscreen webapp -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!-- facebook/orkut -->
+    <meta property="og:title" content="中視戲劇" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="images/thumb.jpg" />
+    <meta property="og:description" content="" />
+    <meta name="description" content="" />
+    <link rel="image_src" type="image/jpeg" href="images/thumb.jpg" />
+    <title>中視戲劇</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="152x152" href="images/thumb/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/thumb/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/thumb/favicon-16x16.png">
+    <link rel="manifest" href="images/thumb/manifest.json">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="theme-color" content="#ffffff">
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" rev="stylesheet" media="screen" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" rev="stylesheet" media="screen" href="css/layout.css" />
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <!-- javascript -->
+    <script type="text/javascript" src="js/jquery-2.1.4.js"></script>
+    <script type="text/javascript" src="js/imgLiquid.js"></script>
+    <script type="text/javascript" src="js/hammer.min.js"></script>
+    <script type="text/javascript" src="js/web.js"></script>
+</head>
+
+<body>
+<!-- facebook page -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v2.9&appId=255633044548036";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<!-- facebook page -->
+    <div id="header" class="header">
+        <div class="topBar">
+            <div class="content">
+                <div class="leftPart">
+                    <a class="main" href="#"><span>中視全球資訊網</span></a>
+                    <a class="news" href="#">新聞</a>
+                    <a class="drama active" href="#">戲劇</a>
+                    <a class="show" href="#">綜藝</a>
+                </div>
+                <div class="rightPart">
+                    <a href="#">節目表</a>
+                    <a href="#">自律委員會</a>
+                    <div class="search">
+                        <span onclick="doSearch('')"></span><input id="search_input" type="text" name="search">
+                    </div>
+                </div>
+            </div>
+        </div> 
+        <div class="mid">
+            <a class="logo" href="./"></a>
+            <div class="onAirDramas">
+                <a href="#">誅仙青雲誌</a>
+                <a href="#">老九門</a>
+                <a href="#">誅仙青雲誌</a>
+                <a href="#">老九門</a>
+                <a href="#">誅仙青雲誌</a>
+                <a href="#">老九門</a>
+            </div>
+            <div class="broadcast" id="broadcast">
+                <div class="list">
+                    <a href="#">快訊在這裡1</a>
+                    <a href="#">快訊在這裡2</a>
+                    <a href="#">快訊在這裡3</a>
+                    <a href="#">快訊在這裡4</a>
+                    <a href="#">快訊在這裡5</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="banner_drama" class="banner">
+        <div class="banner_area">
+            <div class="list">
+                <a title="秀麗江山之長歌行" alt="每周一至周五 晚上9點" class="thumb" href="#"><img src="images/temp/banner1.jpg"/></a>
+                <a title="諸仙青雲誌" alt="每周一至周四 晚上11點" class="thumb" href="#"><img src="images/temp/banner2.jpg"/></a>
+                <a title="老九門" alt="每周一至周四 晚上9點" class="thumb" href="#"><img src="images/temp/banner3.jpg"/></a>
+            </div>
+            <div class="info">
+                <h2></h2>
+                <h3></h3>
+                <a href="#">介紹</a>
+                <div class="nav">
+                    <div class="btn next">
+                        <div title="" class="thumb"><img src=""/></div>
+                    </div>
+                    <div class="ind">0/0</div>
+                    <div class="btn prev">
+                        <div title="" class="thumb"><img src=""/></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="onAir" class="onAir">
+        <div class="head">
+            <h2>強檔熱映</h2>
+            <h3>On Air</h3>
+        </div>
+        <div class="list-area">
+            <div class="list-content">
+                <div class="list">
+                    <a href="#">
+                        <div class="thumb"><img src="images/temp/banner1.jpg" /></div>
+                        <div class="info">
+                            <div class="time">每周一至周五 晚上9點</div>
+                            <div class="title">秀麗江山之長歌行</div>
+                            <div class="brief">張小凡與林驚羽兩少年，經歷草廟村全村滅村的慘案後，被青雲門收歸門下張小凡與林驚羽兩少年，經歷草廟村全村滅村的慘案後，被青雲門收歸門下...</div>
+                        </div>
+                    </a><a href="#">
+                        <div class="thumb"><img src="images/temp/banner2.jpg" /></div>
+                        <div class="info">
+                            <div class="time">每周一至周四 晚上11點</div>
+                            <div class="title">老九門</div>
+                            <div class="brief">張小凡與林驚羽兩少年，經歷草廟村全村滅村的慘案後，被青雲門收歸門下張小凡與林驚羽兩少年，經歷草廟村全村滅村的慘案後，被青雲門收歸門下...</div>
+                        </div>
+                    </a><a href="#">
+                        <div class="thumb"><img src="images/temp/banner3.jpg" /></div>
+                        <div class="info">
+                            <div class="time">每周一至周四 晚上9點</div>
+                            <div class="title">老九門</div>
+                            <div class="brief">張小凡與林驚羽兩少年，經歷草廟村全村滅村的慘案後，被青雲門收歸門下張小凡與林驚羽兩少年，經歷草廟村全村滅村的慘案後，被青雲門收歸門下...</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="prev"></div>
+            <div class="next"></div>
+            <div class="hint"><img src="images/hint_slide.gif" width="80" height="auto"/></div>
+        </div>
+    </div>
+    <div class="review_out">
+        <div id="slider" class="review">
+            <div class="head">
+                <h2>歷史專區</h2>
+                <h3>Review</h3>
+                <a class="more" href="#">更多</a>
+            </div>
+            <div class="list-area">
+                <div class="list-content">
+                    <div class="list">
+                        <a href="#">
+                            <div class="thumb"><img src="images/temp/banner1.jpg" /></div>
+                            <div class="info">
+                                <div class="title">【一把青】6/9起~中視週一至週五 晚上9:00</div>
+                                <div class="brief">進了空軍村，領取了一生顛沛流離的門票。看著希望起飛，等待親人返航：為愛</div>
+                                <div class="time">2017.04.28</div>
+                            </div>
+                        </a><a href="#">
+                            <div class="thumb"><img src="images/temp/banner2.jpg" /></div>
+                            <div class="info">
+                                <div class="title">【一把青】6/9起~中視週一至週五 晚上9:00</div>
+                                <div class="brief">進了空軍村，領取了一生顛沛流離的門票。看著希望起飛，等待親人返航：為愛</div>
+                                <div class="time">2017.04.28</div>
+                            </div>
+                        </a><a href="#">
+                            <div class="thumb"><img src="images/temp/banner3.jpg" /></div>
+                            <div class="info">
+                                <div class="title">【一把青】6/9起~中視週一至週五 晚上9:00</div>
+                                <div class="brief">進了空軍村，領取了一生顛沛流離的門票。看著希望起飛，等待親人返航：為愛</div>
+                                <div class="time">2017.04.28</div>
+                            </div>
+                        </a><a href="#">
+                            <div class="thumb"><img src="images/temp/banner1.jpg" /></div>
+                            <div class="info">
+                                <div class="title">【一把青】6/9起~中視週一至週五 晚上9:00</div>
+                                <div class="brief">進了空軍村，領取了一生顛沛流離的門票。看著希望起飛，等待親人返航：為愛</div>
+                                <div class="time">2017.04.28</div>
+                            </div>
+                        </a><a href="#">
+                            <div class="thumb"><img src="images/temp/banner2.jpg" /></div>
+                            <div class="info">
+                                <div class="title">【一把青】6/9起~中視週一至週五 晚上9:00</div>
+                                <div class="brief">進了空軍村，領取了一生顛沛流離的門票。看著希望起飛，等待親人返航：為愛</div>
+                                <div class="time">2017.04.28</div>
+                            </div>
+                        </a><a href="#">
+                            <div class="thumb"><img src="images/temp/banner3.jpg" /></div>
+                            <div class="info">
+                                <div class="title">【一把青】6/9起~中視週一至週五 晚上9:00</div>
+                                <div class="brief">進了空軍村，領取了一生顛沛流離的門票。看著希望起飛，等待親人返航：為愛</div>
+                                <div class="time">2017.04.28</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="prev"></div>
+                <div class="next"></div>
+                <div class="hint"><img src="images/hint_slide.gif" width="80" height="auto"/></div>
+            </div>
+        </div>  
+    </div>
+    <div class="threeColumn">
+        <div id="bookmark" class="news double">
+            <div class="head">
+                <h2>發燒星聞</h2>
+                <h3>Hot News</h3>
+                <div class="filter drama">
+                    <div>最多瀏覽</div>
+                    <div>最新發佈</div>
+                </div>
+            </div>
+            <div class="list">
+                <div>
+                    <a href="#">
+                        <div class="thumb"><img src="images/temp/banner1.jpg" /></div>
+                        <div class="info">
+                            <div class="title">【一把青】6/9起~中視週一至週五 晚上9:00</div>
+                            <div class="brief">進了空軍村，領取了一生顛沛流離的門票。看著希望起飛，等待親人返航：為愛進了空軍村，領取了一生顛沛流離的門票。看著希望起飛，等待親人返航：為愛</div>
+                            <div class="time">2017.04.28</div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="thumb"><img src="images/temp/banner1.jpg" /></div>
+                        <div class="info">
+                            <div class="title">【一把青】6/9起~中視週一至週五 晚上9:00</div>
+                            <div class="brief">進了空軍村，領取了一生顛沛流離的門票。看著希望起飛，等待親人返航：為愛進了空軍村，領取了一生顛沛流離的門票。看著希望起飛，等待親人返航：為愛</div>
+                            <div class="time">2017.04.28</div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="thumb"><img src="images/temp/banner1.jpg" /></div>
+                        <div class="info">
+                            <div class="title">【一把青】6/9起~中視週一至週五 晚上9:00</div>
+                            <div class="brief">進了空軍村，領取了一生顛沛流離的門票。看著希望起飛，等待親人返航：為愛</div>
+                            <div class="time">2017.04.28</div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="thumb"><img src="images/temp/banner1.jpg" /></div>
+                        <div class="info">
+                            <div class="title">【一把青】6/9起~中視週一至週五 晚上9:00</div>
+                            <div class="brief">進了空軍村，領取了一生顛沛流離的門票。看著希望起飛，等待親人返航：為愛</div>
+                            <div class="time">2017.04.28</div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="thumb"><img src="images/temp/banner1.jpg" /></div>
+                        <div class="info">
+                            <div class="title">【一把青】6/9起~中視週一至週五 晚上9:00</div>
+                            <div class="brief">進了空軍村，領取了一生顛沛流離的門票。看著希望起飛，等待親人返航：為愛</div>
+                            <div class="time">2017.04.28</div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="thumb"><img src="images/temp/banner1.jpg" /></div>
+                        <div class="info">
+                            <div class="title">【一把青】6/9起~中視週一至週五 晚上9:00</div>
+                            <div class="brief">進了空軍村，領取了一生顛沛流離的門票。看著希望起飛，等待親人返航：為愛</div>
+                            <div class="time">2017.04.28</div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="thumb"><img src="images/temp/banner1.jpg" /></div>
+                        <div class="info">
+                            <div class="title">【一把青】6/9起~中視週一至週五 晚上9:00</div>
+                            <div class="brief">進了空軍村，領取了一生顛沛流離的門票。看著希望起飛，等待親人返航：為愛</div>
+                            <div class="time">2017.04.28</div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="thumb"><img src="images/temp/banner1.jpg" /></div>
+                        <div class="info">
+                            <div class="title">【一把青】6/9起~中視週一至週五 晚上9:00</div>
+                            <div class="brief">進了空軍村，領取了一生顛沛流離的門票。看著希望起飛，等待親人返航：為愛</div>
+                            <div class="time">2017.04.28</div>
+                        </div>
+                    </a>
+                </div>
+                <div>
+                    <a href="#">
+                        <div class="thumb"><img src="images/temp/banner2.jpg" /></div>
+                        <div class="info">
+                            <div class="title">【一把青】6/9起~中視週一至週五 晚上9:00</div>
+                            <div class="brief">進了空軍村，領取了一生顛沛流離的門票。看著希望起飛，等待親人返航：為愛進了空軍村，領取了一生顛沛流離的門票。看著希望起飛，等待親人返航：為愛</div>
+                            <div class="time">2017.04.28</div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="thumb"><img src="images/temp/banner2.jpg" /></div>
+                        <div class="info">
+                            <div class="title">【一把青】6/9起~中視週一至週五 晚上9:00</div>
+                            <div class="brief">進了空軍村，領取了一生顛沛流離的門票。看著希望起飛，等待親人返航：為愛進了空軍村，領取了一生顛沛流離的門票。看著希望起飛，等待親人返航：為愛</div>
+                            <div class="time">2017.04.28</div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="thumb"><img src="images/temp/banner2.jpg" /></div>
+                        <div class="info">
+                            <div class="title">【一把青】6/9起~中視週一至週五 晚上9:00</div>
+                            <div class="brief">進了空軍村，領取了一生顛沛流離的門票。看著希望起飛，等待親人返航：為愛</div>
+                            <div class="time">2017.04.28</div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="thumb"><img src="images/temp/banner2.jpg" /></div>
+                        <div class="info">
+                            <div class="title">【一把青】6/9起~中視週一至週五 晚上9:00</div>
+                            <div class="brief">進了空軍村，領取了一生顛沛流離的門票。看著希望起飛，等待親人返航：為愛</div>
+                            <div class="time">2017.04.28</div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="thumb"><img src="images/temp/banner2.jpg" /></div>
+                        <div class="info">
+                            <div class="title">【一把青】6/9起~中視週一至週五 晚上9:00</div>
+                            <div class="brief">進了空軍村，領取了一生顛沛流離的門票。看著希望起飛，等待親人返航：為愛</div>
+                            <div class="time">2017.04.28</div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="thumb"><img src="images/temp/banner2.jpg" /></div>
+                        <div class="info">
+                            <div class="title">【一把青】6/9起~中視週一至週五 晚上9:00</div>
+                            <div class="brief">進了空軍村，領取了一生顛沛流離的門票。看著希望起飛，等待親人返航：為愛</div>
+                            <div class="time">2017.04.28</div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="thumb"><img src="images/temp/banner2.jpg" /></div>
+                        <div class="info">
+                            <div class="title">【一把青】6/9起~中視週一至週五 晚上9:00</div>
+                            <div class="brief">進了空軍村，領取了一生顛沛流離的門票。看著希望起飛，等待親人返航：為愛</div>
+                            <div class="time">2017.04.28</div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="thumb"><img src="images/temp/banner2.jpg" /></div>
+                        <div class="info">
+                            <div class="title">【一把青】6/9起~中視週一至週五 晚上9:00</div>
+                            <div class="brief">進了空軍村，領取了一生顛沛流離的門票。看著希望起飛，等待親人返航：為愛</div>
+                            <div class="time">2017.04.28</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="social single">
+            <div class="share">
+                <a class="fb" href="#"></a>
+                <a class="gplus" href="#"></a>
+            </div>
+            <div class="fb-page" data-href="https://www.facebook.com/Ctfansctvdrama" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="true"><blockquote cite="https://www.facebook.com/Ctfansctvdrama" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Ctfansctvdrama">中視戲劇</a></blockquote></div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="mid">
+            <div class="sitemap">
+                <div>
+                    <a href="#">關於中視</a>
+                    <a href="#">公司簡介</a>
+                    <a href="#">節目表</a>
+                    <a href="#">各處室</a>
+                </div>
+                <div>
+                    <a href="#">公告專區</a>
+                    <a href="#">中視徵才</a>
+                    <a href="#">政令短片</a>
+                    <a href="#">中視倫理委員會</a>
+                    <a href="#">中視新聞自律委員會</a>
+                    <a href="#">2016電視年鑑</a>
+                </div>
+                <div>
+                    <a href="#">聯絡我們</a>
+                    <a href="#">意見信箱</a>
+                    <a href="#">中視觀眾意見處理程序</a>
+                    <a href="#">中視觀眾意見處理公告</a>
+                    <a href="#">中視新聞官方消息公告</a>
+                </div>
+                <div>
+                    <a href="#">友好連結</a>
+                    <a href="#">樂公益</a>
+                    <a href="#">時藝多媒體</a>
+                    <a href="#">中視愛心基金會</a>
+                    <a href="#">公開資訊觀測站</a>
+                    <a href="#">中時電子報</a>
+                    <a href="#">時報旅遊</a>
+                    <a href="#">伊林娛樂</a>
+                </div>
+                <div>
+                    <a href="#">投資人專區</a>
+                    <a href="#">利害關係人專區</a>
+                    <a href="#">投資人關係</a>
+                </div>
+                <div class="social">
+                    <a class="fb" href="#"></a>
+                    <a class="youtube" href="#"></a>
+                </div>
+            </div>
+            <div class="logo">
+                <img src="images/logo.png"/>
+            </div>
+        </div>
+        <div class="copyright">
+            <div>中國電視事業股份有限公司版權所有 © China Television Company, Ltd. All Rights Reserved.</div>
+        </div>    
+    </div>
+    <div title="top" id="gotop" class="gotop"></div>
+</body>
+
+</html>

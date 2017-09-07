@@ -89,113 +89,16 @@ $(document).ready(
             }
         }
 
-        //banner_index
-        if ($("#banner_index").length > 0) {
-            var autoPlayIndex = true;
-            var sto3;
-            var $bannerIndexId = -1;
-            var $bannerIndexMax = $("#banner_index_list").find("a").length;
-            var nextIndex = $("#banner_index").find(".next").eq(0);
-            var prevIndex = $("#banner_index").find(".prev").eq(0);
-            var btnList = $("#banner_index .btns .list ul").eq(0);
+        //bookmark
+        if ($("#bookmark").length > 0) {
+            var $filterBtns = $("#bookmark").find('.filter div');
+            var $lists = $("#bookmark").find('.list > div');
+            //var $bookmark_id=0;
 
-            
-            //prevIndex.hide();
-            //nextIndex.hide();
-
-  
-            nextIndex.click(function() {
-                if (parseInt(btnList.css("left")) + btnList.prop('scrollWidth') > btnList.parent().width()) {
-                    var containWIndex = $("#banner_index").find(".btns").eq(0).width();
-
-                    btnList.css("left", parseInt(btnList.css("left"))-containWIndex);
-                }
-            });
-            prevIndex.click(function() {
-                    var containWIndex = btnList.parent().width();
-                    var tl = parseInt(btnList.css("left"))+containWIndex;
-                    btnList.css("left", tl<0?parseInt(btnList.css("left"))+containWIndex:0);
-            });
-
-            //add Btnd
-            $("#banner_index_list").find("a").each(function(index){
-                var tImg = $(this).find("img").eq(0).attr("src");
-                $("#banner_index").find("ul").append('<li><img src="'+tImg+'"/></li>');
-            });
-            $("#banner_index ul").eq(0).find("li").each(function(index){
-                $(this).click(function() {
-                    autoPlayIndex = false;
-                    clearTimeout(sto3);
-                    swapIndexBanner(index);
-                });
-            });
-
-            //autoplay
-            swapIndexBanner(-1);
-        }
-
-        function swapIndexBanner(num) {
-            if (num === -1) {
-                $bannerIndexId += 1;
-                if ($bannerIndexId > $bannerIndexMax - 1) {
-                    $bannerIndexId = 0;
-                }
-            } else {
-                $bannerIndexId = num;
-            }
-            var tar = $("#banner_index .banner_area > .list").eq(0).find("a").eq($bannerIndexId);
-            tar.addClass("selected").siblings(".selected").removeClass("selected");
-
-            var tar2 = $("#banner_index .btns > .list ul").eq(0).find("li").eq($bannerIndexId);
-            tar2.addClass("selected").siblings(".selected").removeClass("selected");
-
-            //move list
-            if (autoPlayIndex) {
-                if(window.innerWidth < 850){
-                    btnList.css("left", 0);
-                    $("#banner_index .btns > .list").eq(0).animate({
-                        scrollLeft: "+="+tar2.offset().left
-                    }, 500);
-                }else{
-                    $("#banner_index .btns > .list").eq(0).scrollLeft(0);
-                    btnList.css("left", $("#banner_index .btns > .list ul").offset().left - tar2.offset().left);
-                    
-                }
-            }
-
-            //define info
-            var title = tar.attr("title");
-            var cat = tar.attr("cat");
-            var catName="熱門";
-            if(cat==="drama"){
-                catName="戲劇";
-            }else if(cat == "show"){
-                catName="綜藝";
-            }else if(cat==""){
-                catName="新聞";
-            }
-            var brief = tar.attr("alt");
-            var link = tar.attr("href");
-            $("#banner_index .info").removeClass().addClass("info").addClass(cat);
-            $("#banner_index .info").eq(0).find("h2").hide().html(title).delay(800).fadeIn();
-            $("#banner_index .info").eq(0).find("h3").hide().html(catName).delay(800).fadeIn();
-            $("#banner_index .info").eq(0).find("p").hide().html(brief).delay(800).fadeIn();
-            $("#banner_index .info").eq(0).find("a").attr("href", link);
-
-            //
-            var countDown = 4500;
-            if (autoPlayIndex) {
-                //autoBar
-                $("#autoBar").stop(true,true).width(0).animate({"width":"100%"},countDown-300);
-                //timeout
-                sto3 = setTimeout(function() {
-                    swapIndexBanner(-1);
-                }, countDown);
-            }
-
-            $("#autoBar").removeClass().addClass(cat);
-
-
+            $filterBtns.click(function() {
+                $(this).addClass('active').siblings('.active').removeClass('active');
+                $lists.eq($(this).index()).addClass('active').siblings('.active').removeClass('active');
+            }).eq(0).click();
         }
 
         //banner
@@ -247,13 +150,9 @@ $(document).ready(
             var tar = $("#banner_drama .list").eq(0).find("a").eq($banner_id);
             tar.addClass("selected").siblings(".selected").removeClass("selected");
             //define info
-            var title = tar.attr("title");
-            var time = tar.attr("alt");
-            var link = tar.attr("href");
-            $("#banner_drama .info").eq(0).find("h2").hide().html(title).fadeIn();
-            $("#banner_drama .info").eq(0).find("h3").hide().html(time).fadeIn();
-            $("#banner_drama .info").eq(0).find(".ind").html(($banner_id + 1) + "/" + $banner_max);
-            $("#banner_drama .info").eq(0).find("a").attr("href", link);
+            //var title = tar.attr("title");
+            //var time = tar.attr("alt");
+            //var link = tar.attr("href");
             //define btns
             var nextId = $banner_id + 1;
             if (nextId > $banner_max - 1) {
@@ -278,17 +177,6 @@ $(document).ready(
                 }, 4000);
             }
 
-        }
-        //bookmark
-        if ($("#bookmark").length > 0) {
-            var $filterBtns = $("#bookmark").find('.filter div');
-            var $lists = $("#bookmark").find('.list > div');
-            //var $bookmark_id=0;
-
-            $filterBtns.click(function() {
-                $(this).addClass('active').siblings('.active').removeClass('active');
-                $lists.eq($(this).index()).addClass('active').siblings('.active').removeClass('active');
-            }).eq(0).click();
         }
  
         //programList
@@ -403,14 +291,14 @@ $(document).ready(
             tar_c.addClass("selected").siblings(".selected").removeClass("selected");
             */
             //define info
-            var tar_c = $("#banner_carousel .list").eq(0).find("a").eq($banner_id_c);
-            var title_c = tar_c.attr("title");
-            var time_c = tar_c.attr("alt");
-            var link_c = tar_c.attr("href");
-            $("#banner_carousel .info").eq(0).find("h2").hide().html(title_c).fadeIn();
-            $("#banner_carousel .info").eq(0).find("h3").hide().html(time_c).fadeIn();
-            $("#banner_carousel .info").eq(0).find(".ind").html(($banner_id_c + 1) + "/" + $banner_max_c);
-            $("#banner_carousel .info").eq(0).find("a").attr("href", link_c);
+            //var tar_c = $("#banner_carousel .list").eq(0).find("a").eq($banner_id_c);
+            //var title_c = tar_c.attr("title");
+            //var time_c = tar_c.attr("alt");
+            //var link_c = tar_c.attr("href");
+            //$("#banner_carousel .info").eq(0).find("h2").hide().html(title_c).fadeIn();
+            //$("#banner_carousel .info").eq(0).find("h3").hide().html(time_c).fadeIn();
+            //$("#banner_carousel .info").eq(0).find(".ind").html(($banner_id_c + 1) + "/" + $banner_max_c);
+            //$("#banner_carousel .info").eq(0).find("a").attr("href", link_c);
             
 
             //
@@ -533,7 +421,7 @@ $(document).ready(
 
         //fancybox
         if ($("#gallery").length > 0) {
-            $("[data-fancybox]").fancybox({
+            $("#gallery [data-fancybox]").fancybox({
                 thumbs     : false,
                 afterLoad: function( instance, slide ) {
                     //console.log( instance );
@@ -545,14 +433,68 @@ $(document).ready(
             handleGallery();
         }
 
+        if ($("#topics").length > 0) {
+            $('#topics [data-fancybox]').fancybox({
+              afterLoad : function( instance, current ) {
+
+                 // Remove scrollbars and change background
+                current.$content.css({
+                        overflow   : 'visible',
+                  background : '#000'
+                    });
+                            
+              },
+              onUpdate : function( instance, current ) {
+                var width,
+                    height,
+                    ratio = 16 / 9,
+                    video = current.$content;
+                
+                if ( video ) {
+                  video.hide();
+
+                  width  = current.$slide.width();
+                  height = current.$slide.height() - 100;
+                  
+                  if ( height * ratio > width ) {
+                    height = width / ratio;
+                  } else {
+                    width = height * ratio;
+                  }
+
+                  video.css({
+                    width  : width,
+                    height : height
+                  }).show();
+
+                }
+              }
+            })
+        }
+
         //go to top
-        $('#gotop').click(function() {
-            var $body = (window.opera) ? (document.compatMode == "CSS1Compat" ? $('html') : $('body')) : $('html,body');
-            $body.animate({
-                scrollTop: 0
-            }, 800);
-            return false;
+        if ($("#gotop").length > 0) {
+            $('#gotop').click(function() {
+                var $body = (window.opera) ? (document.compatMode == "CSS1Compat" ? $('html') : $('body')) : $('html,body');
+                $body.animate({
+                    scrollTop: 0
+                }, 800);
+                return false;
+            });
+        }
+
+        //mobile menu
+        $('#mobile-menu').click(function() {
+            $('.channel').toggleClass("active");
         });
+        if ($(".promo").length > 0) {
+            $(".promo").each(function(index){
+                $(this).find(".closead").click(function() {
+                    $(this).parent().slideUp();
+                });
+            });
+        }
+        
 
         //on top detect
         atTopDetect();

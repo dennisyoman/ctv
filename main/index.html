@@ -50,86 +50,111 @@
 }(document, 'script', 'facebook-jssdk'));</script>
 <!-- facebook page -->
     <div id="header" class="header">
-        <div class="topBar index">
+        <div class="broadcast" id="broadcast">
+            <div class="list">
+                <a href="#">【一把青】6/9起~中視週一至週五 晚上9:00首播</a>
+                <a href="#">為解救啟山，齊鐵嘴決定帶他前往東北張家！</a>
+                <a href="#">郭軫被大隊長處罰，在炙熱的天氣下在機場拖飛機</a>
+            </div>
+        </div>
+        <div class="topBar">
             <div class="content">
                 <div class="leftPart">
-                    <div>
-                        <a class="main" href="#"><span>中視全球資訊網</span></a>
-                    </div>
-                    <div>
-                        <a class="news" href="#">新聞</a>
-                        <div class="sub">
-                            <a href="#">酒駕新法上路引民怨</a>
-                            <a href="#">前瞻計畫藍綠齊杯葛</a>
-                            <a href="#">蔡英文總統前瞻親上火線</a>
-                        </div>
-                    </div>
-                    <div>
-                        <a class="drama" href="#">戲劇</a>
-                        <div class="sub">
-                            <a href="#">諸仙青雲誌</a>
-                            <a href="#">九尾胡</a>
-                            <a href="#">愛的不是你</a>
-                        </div>
-                    </div>
-                    <div>
-                        <a class="show" href="#">綜藝</a>
-                        <div class="sub">
-                            <a href="#">飢餓遊戲</a>
-                            <a href="#">名模生死鬥</a>
-                            <a href="#">前進日本</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="rightPart">
+                    <a class="main" href="#"><span>中視全球資訊網</span></a>
                     <a href="#">節目表</a>
                     <a href="#">自律委員會</a>
+                </div>
+                <div class="rightPart">
                     <div class="search">
                         <span onclick="doSearch('')"></span><input id="search_input" type="text" name="search">
                     </div>
                 </div>
             </div>
         </div> 
-        <div class="mid index">
-            <a class="logo" href="./"><img src="images/ctv_logo.gif"/></a>
-            <div class="broadcast" id="broadcast">
-                <div class="list">
-                    <a class="drama" href="#">【一把青】6/9起~中視週一至週五 晚上9:00首播</a>
-                    <a class="news" href="#">為解救啟山，齊鐵嘴決定帶他前往東北張家！</a>
-                    <a class="show" href="#">郭軫被大隊長處罰，在炙熱的天氣下在機場拖飛機</a>
+        <div class="mobile-menu" id="mobile-menu"></div>
+        <div class="mid">
+            <a class="logo index" href="./"><img src="images/ctv_logo.gif"/></a>
+            <div class="channel">
+                <div>
+                    <a class="dd" href="#">戲劇</a>
+                    <div class="sub">
+                        <a href="#">諸仙青雲誌</a>
+                        <a href="#">九尾胡</a>
+                        <a href="#">愛的不是你</a>
+                    </div>
+                </div>
+                <div>
+                    <a class="dd" href="#">綜藝</a>
+                    <div class="sub">
+                        <a href="#">飢餓遊戲</a>
+                        <a href="#">名模生死鬥</a>
+                        <a href="#">前進日本</a>
+                    </div>
+                </div>
+                <div>
+                    <a class="dd" href="#">新聞</a>
+                    <div class="sub">
+                        <a href="#">酒駕新法上路引民怨</a>
+                        <a href="#">前瞻計畫藍綠齊杯葛</a>
+                        <a href="#">蔡英文總統前瞻親上火線</a>
+                    </div>
+                </div>
+                <div>
+                    <a href="#">新聞台</a>
+                </div>
+                <div>
+                    <a href="#">經典台</a>
+                </div>
+                <div>
+                    <a href="#">菁采台</a>
+                </div>
+                <div>
+                    <a class="dd" href="#">主播專區</a>
+                    <div class="sub">
+                        <a href="#">哈遠儀</a>
+                        <a href="#">蕭惠文</a>
+                        <a href="#">侯乃榕</a>
+                        <a href="#">林慧蓉</a>
+                        <a href="#">鍾季容</a>
+                        <a href="#">方彥廸</a>
+                        <a href="#">陳志耕</a>
+                        <a href="#">張以仁</a>
+                        <a href="#">哈遠儀</a>
+                        <a href="#">郭岱軒</a>
+                        <a href="#">蔣育圻</a>
+                        <a href="#">劉品薇</a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <div id="banner_index" class="banner_index">
+
+    <div class="promo">
+            <a href="#">
+                <img src="images/temp/ad4.jpg"/>
+            </a>
+            <a href="#">
+                <img src="images/temp/ad.jpg"/>
+            </a>
+
+
+            <div class="closead">X</div>
+    </div>
+
+    <div id="banner_carousel" class="banner_carousel index">
         <div class="banner_area">
-            <div class="list" id="banner_index_list">
-                <a title="秀麗江山之長歌行" alt="每周一至周五 晚上9點" cat="drama" class="thumb" href="#"><img src="images/temp/banner_index1.jpg"/></a>
-                <a title="諸仙青雲誌" alt="2017/07/01起 每周六20:00首播" cat="show" class="thumb" href="#"><img src="images/temp/widebanner1.jpg"/></a>
-                <a title="大英帝國的逆襲" alt="2017/07/01 Londan" cat="news" class="thumb" href="#"><img src="images/temp/banner6.jpg"/></a>
-                <a title="秀麗江山之長歌行" alt="每周一至周五 晚上9點" cat="drama" class="thumb" href="#"><img src="images/temp/banner_index1.jpg"/></a>
-                <a title="諸仙青雲誌" alt="2017/07/01起 每周六20:00首播" cat="show" class="thumb" href="#"><img src="images/temp/widebanner1.jpg"/></a>
-                <a title="大英帝國的逆襲" alt="2017/07/01 Londan" cat="news" class="thumb" href="#"><img src="images/temp/banner6.jpg"/></a>
-                <a title="秀麗江山之長歌行" alt="每周一至周五 晚上9點" cat="drama" class="thumb" href="#"><img src="images/temp/banner_index1.jpg"/></a>
-                <a title="諸仙青雲誌" alt="2017/07/01起 每周六20:00首播" cat="show" class="thumb" href="#"><img src="images/temp/widebanner1.jpg"/></a>
+            <div class="list">
+                <a title="綜藝玩很大" alt="每周一至周四 晚上11點" class="thumb" href="#"><img src="images/temp/banner9.jpg"/></a>
+                <a title="秀麗江山之長歌行" alt="每周一至周五 晚上9點" cat="drama" class="thumb" href="#"><img src="images/temp/banner1.jpg"/></a>
+                <a title="飢餓遊戲" alt="每周一至周五 晚上9點" class="thumb" href="#"><img src="images/temp/banner4.jpg"/></a>
+                <a title="諸仙青雲誌" alt="2017/07/01起 每周六20:00首播" cat="show" class="thumb" href="#"><img src="images/temp/banner2.jpg"/></a>
+                <a title="名模星任務" alt="每周一至周五 晚上9點" class="thumb" href="#"><img src="images/temp/banner8.jpg"/></a>
                 <a title="大英帝國的逆襲" alt="2017/07/01 Londan" cat="news" class="thumb" href="#"><img src="images/temp/banner6.jpg"/></a>
             </div>
-            <div class="info drama">
-                <a href="#">
-                    <h3></h3>
-                    <h2></h2>
-                    <p></p>
-                </a>
+            <div class="nav">
+                <div class="btn next"></div>
+                <div class="btn prev"></div>
             </div>
-            <div class="btns">
-                <div class="list">
-                    <ul></ul>
-                </div>
-                <div class="prev"></div>
-                <div class="next"></div>
-                <div class="hint"><img src="images/hint_slide.gif" width="80" height="auto"/></div>
-            </div>
-            <div class="autoBar"><span id="autoBar"></span></div>
         </div>
     </div>
     <div id="onAir" class="onAir_index" limit="3">
@@ -170,7 +195,7 @@
                         <div class="info">
                             <div class="cat">新聞</div>
                             <div class="title">分析：英國大選結果對脫歐意味著什麼？</div>
-                            <div class="brief">脫歐談判將於9天後展開，英國政壇的起起落落對其意味著什麼？</div>
+                            <div class="brief">脫歐</div>
                         </div>
                     </a><a class="drama" href="#">
                         <div class="thumb"><img src="images/temp/banner3.jpg" /></div>
@@ -355,11 +380,25 @@
     <div class="partners">
         <div>
             <div class="section_title"><span>中視合作夥伴</span></div>
-            <a href="#"><img title="夥伴名稱1" src="images/logo.png"/></a>
-            <a href="#"><img title="夥伴名稱2" src="images/coollife.png"/></a>
-            <a href="#"><img title="夥伴名稱3" src="images/ctv_logo.png"/></a>
+            <a href="#"><img title="夥伴名稱1" src="images/temp/ad4.jpg"/></a>
+            <a href="#"><img title="夥伴名稱1" src="images/temp/ad4.jpg"/></a>
+            <a href="#"><img title="夥伴名稱1" src="images/temp/ad4.jpg"/></a>
         </div>
     </div>
+
+    <div class="promo">
+            
+            <a href="#">
+                <img src="images/temp/ad2.jpg"/>
+            </a>
+            <a href="#">
+                <img src="images/temp/ad.jpg"/>
+            </a>
+
+
+            <div class="closead">X</div>
+    </div>
+
     <div class="footer">
         <div class="mid">
             <div class="sitemap">
