@@ -1895,7 +1895,22 @@ body {
 }
 .threeColumn > .news.full .head h2 {
   color: #fff;
-  font-weight: bold;
+}
+.threeColumn > .news.full .head h2::before {
+  content: "\f26c";
+  font-family: FontAwesome;
+  margin-right: 8px;
+  background: #333;
+  line-height: 34px;
+  font-size: 18px;
+  text-align: center;
+  height: 34px;
+  width: 34px;
+  display: inline-block;
+  letter-spacing: 0;
+  border-radius: 17px;
+  -moz-border-radius: 17px;
+  -webkit-border-radius: 17px;
 }
 .threeColumn > .news.full .list a {
   display: inline-block;
