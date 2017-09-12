@@ -1842,6 +1842,132 @@ body {
   background: #fff;
   border-right: 1px solid #eee;
 }
+.threeColumn > .news.full {
+  border: 0;
+  padding-top: 0;
+  border-bottom: 5px solid #eee;
+}
+.threeColumn > .news.full.five:nth-child(even) .list a:first-child {
+  float: right;
+  margin-right: 1%;
+  margin-left: 2%;
+}
+.threeColumn > .news.full.five .list a:nth-child(5) {
+  display: inline-block;
+}
+.threeColumn > .news.full.five .list a .info .title {
+  height: 72px;
+  max-height: 72px;
+}
+.threeColumn > .news.full.five .list a:first-child {
+  width: 47%;
+  margin-right: 2%;
+}
+.threeColumn > .news.full.five .list a:first-child .info .title {
+  height: auto;
+  margin-bottom: 10px;
+}
+.threeColumn > .news.full.five .list a:first-child .info .brief {
+  display: block;
+  display: -webkit-box;
+}
+.threeColumn > .news.full.five .list a:first-child .info .time {
+  margin-top: 10px;
+}
+.threeColumn > .news.full .head {
+  background: #0e7bc1;
+  padding: 8px 10px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border-radius: 0 0 8px 8px;
+  -moz-border-radius: 0 0 8px 8px;
+  -webkit-border-radius: 0 0 8px 8px;
+  -moz-box-shadow: inset 0 3px 3px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: inset 0 3px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 3px 3px rgba(0, 0, 0, 0.1);
+}
+.threeColumn > .news.full .head.drama {
+  background: #ca3537;
+}
+.threeColumn > .news.full .head.show {
+  background: #e8c94f;
+}
+.threeColumn > .news.full .head h2 {
+  color: #fff;
+  font-weight: bold;
+}
+.threeColumn > .news.full .list a {
+  display: inline-block;
+  float: left;
+  width: 23%;
+  margin: 1%;
+  text-decoration: none;
+  border-bottom: 0px solid #eee;
+  color: #999;
+  height: auto;
+}
+.threeColumn > .news.full .list a:nth-child(5) {
+  display: none;
+}
+.threeColumn > .news.full .list a:hover {
+  text-decoration: underline;
+}
+.threeColumn > .news.full .list a .thumb {
+  width: 100%;
+  padding-top: 66%;
+  float: none;
+}
+.threeColumn > .news.full .list a .info {
+  margin-left: 0;
+}
+.threeColumn > .news.full .list a .info .title {
+  font-size: 24px;
+  line-height: 36px;
+  height: auto;
+  max-height: 72px;
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  letter-spacing: 0.1em;
+  display: block;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.threeColumn > .news.full .list a .info .brief {
+  font-size: 16px;
+  color: #000;
+  max-height: 50px;
+  line-height: 25px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  display: none;
+}
+.threeColumn > .news.full .list a .info .time {
+  margin-top: 0;
+}
+@media screen and (max-width: 850px) {
+  .threeColumn > .news.full .list a {
+    width: 90% !important;
+    margin: 5% !important;
+    float: none !important;
+  }
+  .threeColumn > .news.full .list a .info .title {
+    font-size: 24px !important;
+    line-height: 36px !important;
+    height: auto !important;
+    max-height: 72px !important;
+    margin-bottom: 10px !important;
+  }
+  .threeColumn > .news.full .list a .info .brief {
+    display: none !important;
+  }
+}
 .threeColumn > .news.single {
   border-right: 0px solid #eee;
   border-bottom: 0px solid #eee;
