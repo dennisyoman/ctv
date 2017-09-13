@@ -1847,11 +1847,6 @@ body {
   padding-top: 0;
   border-bottom: 5px solid #eee;
 }
-.threeColumn > .news.full.five:nth-child(even) .list a:first-child {
-  float: right;
-  margin-right: 1%;
-  margin-left: 2%;
-}
 .threeColumn > .news.full.five .list a:nth-child(5) {
   display: inline-block;
 }
