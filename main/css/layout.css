@@ -474,6 +474,9 @@ body {
   color: #333;
   letter-spacing: 0.125em;
   text-decoration: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .header .mid .channel > div > .sub > a:hover {
   text-decoration: underline;
